@@ -6,12 +6,12 @@
 
 /* Base Variables */
 :root {
-  /* Purple & White Theme - Refined and More Readable */
-  --primary: #6B30D9;      /* Slightly darker purple for better contrast */
+  /* Purple & White Theme - Web-safe and consistent across platforms */
+  --primary: #6A30C9;      /* More web-safe purple */
   --primary-light: #9B6EF3;
-  --primary-dark: #5425B3;
-  --secondary: #F8F5FF;    /* Lighter purple background for better readability */
-  --accent: #FF5A5A;       /* Brighter accent for better visibility */
+  --primary-dark: #4F2A94;  /* Slightly darker for better contrast */
+  --secondary: #F8F5FF;    /* Lighter purple background */
+  --accent: #FF5A5A;       /* Bright accent */
   
   /* Neutrals */
   --neutral-50: #FAFAFA;
@@ -37,9 +37,9 @@
   --bg-sidebar: #FFFFFF;
   
   /* Text Colors - Improved for readability */
-  --text-primary: #333333;
-  --text-secondary: #555555;
-  --text-tertiary: #777777;
+  --text-primary: #222222;
+  --text-secondary: #444444;
+  --text-tertiary: #666666;
   --text-on-primary: #FFFFFF;
   --text-on-secondary: #6B30D9;
   
@@ -106,6 +106,11 @@
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Ensure quote box has good contrast */
+  --quote-bg: #F0E6FF;
+  --quote-text: #333333;
+  --quote-border: #6A30C9;
 }
 
 /* Base Styles */
@@ -830,7 +835,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Improve quote box readability */
 .bg-secondary {
-  background-color: #F0E6FF !important; /* Lighter purple for better text contrast */
+  background-color: var(--secondary) !important;
+}
+
+.bg-secondary * {
+  color: var(--text-primary);
 }
 
 /* Improve button text readability */
@@ -936,8 +945,8 @@ select {
 
 /* Improve quote box */
 .quote-box {
-  background-color: #F0E6FF;
-  border-left: 4px solid var(--primary);
+  background-color: var(--quote-bg);
+  border-left: 4px solid var(--quote-border);
   padding: 1.5rem;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
@@ -946,7 +955,7 @@ select {
 
 .quote-text {
   font-style: italic;
-  color: #333;
+  color: var(--quote-text);
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -964,4 +973,31 @@ select {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 0.875rem;
   color: #555;
+}
+
+/* Ensure consistent rendering of purple elements */
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+/* Ensure buttons have consistent coloring */
+button.bg-primary, 
+.btn.bg-primary,
+a.bg-primary {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+button.bg-primary:hover, 
+.btn.bg-primary:hover,
+a.bg-primary:hover {
+  background-color: var(--primary-dark) !important;
 }
