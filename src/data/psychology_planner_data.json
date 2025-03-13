@@ -1,0 +1,1001 @@
+{
+  "courses": [
+    {
+      "course_code": "PSY 201Z",
+      "title": "+*INTRODUCTION TO PSYCHOLOGY I",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 4-5:50p",
+      "instructor": "L. Shank",
+      "source_term": "202502",
+      "requirement_categories": [
+        "Psychology Core",
+        "Bacc Core: Social Processes & Institutions"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "Psychology Core"
+    },
+    {
+      "course_code": "PSY 202HZ",
+      "title": "+*INTRODUCTION TO PSYCHOLOGY II",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 12-1:50p",
+      "instructor": "C. Wolsko",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "Unknown"
+    },
+    {
+      "course_code": "PSY 202Z",
+      "title": "+*INTRODUCTION TO PSYCHOLOGY II",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 12-1:50p",
+      "instructor": "C. Wolsko",
+      "source_term": "202501",
+      "requirement_categories": [
+        "Psychology Core",
+        "Bacc Core: Social Processes & Institutions"
+      ],
+      "prerequisites": [
+        "PSY 201Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Core"
+    },
+    {
+      "course_code": "PSY 211",
+      "title": "CAREERS IN PSYCHOLOGY",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "M 10-11:50a",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202503",
+      "requirement_categories": [
+        "Psychology Core"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "Psychology Core"
+    },
+    {
+      "course_code": "PSY 297",
+      "title": "THINKING LIKE A PSYCHOLOGICAL SCIENTIST",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 10-11:50a",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202501",
+      "requirement_categories": [
+        "Psychology Methods"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Methods"
+    },
+    {
+      "course_code": "PSY 298",
+      "title": "QUANTITATIVE METHODS IN PSYCHOLOGICAL SCIENCE",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 10-11:20a",
+      "instructor": "C. Wolsko",
+      "source_term": "202502",
+      "requirement_categories": [
+        "Psychology Methods"
+      ],
+      "prerequisites": [
+        "PSY 297"
+      ],
+      "credits": 4,
+      "category": "Psychology Methods"
+    },
+    {
+      "course_code": "PSY 301",
+      "title": "^RESEARCH METHODS IN PSYCHOLOGICAL SCIENCE",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 12-1:50p",
+      "instructor": "S. Harsey",
+      "source_term": "202503",
+      "requirement_categories": [
+        "Psychology Methods"
+      ],
+      "prerequisites": [
+        "PSY 298"
+      ],
+      "credits": 4,
+      "category": "Psychology Methods"
+    },
+    {
+      "course_code": "PSY 311",
+      "title": "TRANSFER TRANSITIONS: CAREERS IN PSYCHOLOGY",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "W 10-11:50a",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202503",
+      "requirement_categories": [
+        "Psychology Core"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "Psychology Core"
+    },
+    {
+      "course_code": "PSY 330",
+      "title": "BRAIN AND BEHAVIOR",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 12-1:50p",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202502",
+      "requirement_categories": [
+        "Psychology Survey",
+        "CLA Core"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Survey"
+    },
+    {
+      "course_code": "PSY 350",
+      "title": "HUMAN LIFESPAN DEVELOPMENT",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 4-5:50p",
+      "instructor": "M. Bartini",
+      "source_term": "202501",
+      "requirement_categories": [
+        "Psychology Survey",
+        "CLA Core"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Survey"
+    },
+    {
+      "course_code": "PSY 360",
+      "title": "SOCIAL PSYCHOLOGY",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 10-11:50a",
+      "instructor": "S. Harsey",
+      "source_term": "202502",
+      "requirement_categories": [
+        "Psychology Survey",
+        "CLA Core"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Survey"
+    },
+    {
+      "course_code": "PSY 370",
+      "title": "PERSONALITY",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 2-3:50p",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202503",
+      "requirement_categories": [
+        "Psychology Survey",
+        "CLA Core"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Survey"
+    },
+    {
+      "course_code": "PSY 381",
+      "title": "ABNORMAL PSYCHOLOGY",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 12-1:50p",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202501",
+      "requirement_categories": [
+        "Psychology Survey"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Survey"
+    },
+    {
+      "course_code": "PSY 401",
+      "title": "RESEARCH",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "",
+      "instructor": "C. Wolsko",
+      "source_term": "202501",
+      "requirement_categories": [
+        "Psychology Research"
+      ],
+      "prerequisites": [],
+      "credits": 1,
+      "category": "Psychology Research"
+    },
+    {
+      "course_code": "PSY 402",
+      "title": "INDEPENDENT STUDY",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "",
+      "instructor": "S. Lipscomb",
+      "source_term": "202502",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "Unknown"
+    },
+    {
+      "course_code": "PSY 410",
+      "title": "PSYCHOLOGY INTERNSHIP",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "T 2-3:50p",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "Unknown"
+    },
+    {
+      "course_code": "PSY 411",
+      "title": "PSYCHOLOGY CAPSTONE",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 2-3:50p",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202501",
+      "requirement_categories": [
+        "Psychology Capstone"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "Psychology Capstone"
+    },
+    {
+      "course_code": "PSY 426",
+      "title": "*PSYCHOLOGY OF GENDER",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 2-3:50p",
+      "instructor": "S. Harsey",
+      "source_term": "202502",
+      "requirement_categories": [
+        "Psychology Cultural Competency",
+        "Psychology Advanced"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Cultural Competency"
+    },
+    {
+      "course_code": "PSY 482",
+      "title": "PSYCHOTHERAPY",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 12-1:50p",
+      "instructor": "Staff",
+      "source_term": "202503",
+      "requirement_categories": [
+        "Psychology Advanced"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Advanced"
+    },
+    {
+      "course_code": "PSY 488",
+      "title": "PSYCHOLOGY OF TRAUMA, OPPRESSION, AND RESILIENCE",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 10-11:50a",
+      "instructor": "S. Harsey",
+      "source_term": "202501",
+      "requirement_categories": [
+        "Psychology Cultural Competency",
+        "Psychology Advanced"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Cultural Competency"
+    },
+    {
+      "course_code": "PSY 498",
+      "title": "HEALTH PSYCHOLOGY",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 10-11:50a",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202503",
+      "requirement_categories": [
+        "Psychology Advanced"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Advanced"
+    },
+    {
+      "course_code": "PSY 499",
+      "title": "SPECIAL TOPICS: ST/ PSYCHOLOGY OF RELIGION",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "",
+      "meeting_pattern": "",
+      "instructor": "",
+      "source_term": "202502",
+      "requirement_categories": [
+        "Psychology Advanced"
+      ],
+      "prerequisites": [
+        "PSY 201Z",
+        "PSY 202Z"
+      ],
+      "credits": 4,
+      "category": "Psychology Advanced"
+    },
+    {
+      "course_code": "HDFS 201",
+      "title": "*CONTEMPORARY FAMILIES IN THE U.S.",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 2-3:20p",
+      "instructor": "B. Pells",
+      "source_term": "202501",
+      "requirement_categories": [
+        "HDFS Core"
+      ],
+      "prerequisites": [],
+      "credits": 3,
+      "category": "HDFS Core"
+    },
+    {
+      "course_code": "HDFS 240",
+      "title": "*HUMAN SEXUALITY",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 12:30-1:50p",
+      "instructor": "S. Lipscomb",
+      "source_term": "202501",
+      "requirement_categories": [
+        "HDFS Elective",
+        "Bacc Core: Social Processes & Institutions"
+      ],
+      "prerequisites": [],
+      "credits": 3,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 260",
+      "title": "*LIFE HACKS FOR EMOTIONAL INTELLIGENCE AND WELL-BEING",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 2-3:50p",
+      "instructor": "S. Landon",
+      "source_term": "202502",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 3,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 262",
+      "title": "INTRODUCTION TO HUMAN SERVICES",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "502",
+      "meeting_pattern": "MW 12-1:20p",
+      "instructor": "D. Lynn",
+      "source_term": "202502",
+      "requirement_categories": [
+        "HDFS Elective"
+      ],
+      "prerequisites": [],
+      "credits": 3,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 310",
+      "title": "HUMAN SERVICES PRACTICUM",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "T 2-3:50p",
+      "instructor": "D. Lynn",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 311",
+      "title": "INFANT AND CHILD DEVELOPMENT",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 2-3:50p",
+      "instructor": "S. Landon",
+      "source_term": "202501",
+      "requirement_categories": [
+        "HDFS Core"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Core"
+    },
+    {
+      "course_code": "HDFS 312",
+      "title": "PARENTING RESEARCH AND APPLICATION",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "F 9a-12:50p",
+      "instructor": "C. Fischer",
+      "source_term": "202501",
+      "requirement_categories": [
+        "HDFS Elective"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 313",
+      "title": "ADOLESCENT DEVELOPMENT",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "T 12-1:50p",
+      "instructor": "C. Fischer",
+      "source_term": "202502",
+      "requirement_categories": [
+        "HDFS Core"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Core"
+    },
+    {
+      "course_code": "HDFS 314",
+      "title": "ADULT DEVELOPMENT AND AGING",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "R 2-3:50p",
+      "instructor": "S. Landon",
+      "source_term": "202503",
+      "requirement_categories": [
+        "HDFS Core"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Core"
+    },
+    {
+      "course_code": "HDFS 330",
+      "title": "ENGAGING WITH CHILDREN AGES 0-8",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "M 4-5:50p",
+      "instructor": "S. Landon",
+      "source_term": "202502",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 331",
+      "title": "PRACTICUM IN CHILD DEVELOPMENT",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "M 4-5:20p",
+      "instructor": "L. Kealey",
+      "source_term": "202503",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 341",
+      "title": "FAMILY STUDIES",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 10-11:50a",
+      "instructor": "C. Fischer",
+      "source_term": "202501",
+      "requirement_categories": [
+        "HDFS Core"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Core"
+    },
+    {
+      "course_code": "HDFS 360",
+      "title": "CRITICAL THINKING IN HUMAN DEVELOPMENT AND FAMILY SCIENCES",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "M 12-1:50p",
+      "instructor": "D. Lynn",
+      "source_term": "202501",
+      "requirement_categories": [
+        "HDFS Elective"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 361",
+      "title": "APPLIED RESEARCH METHODS",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 2-3:50p",
+      "instructor": "D. Becht-Buss",
+      "source_term": "202502",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 401",
+      "title": "RESEARCH",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "",
+      "instructor": "S. Lipscomb",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 402",
+      "title": "INDEPENDENT STUDY",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "",
+      "instructor": "Staff",
+      "source_term": "202502",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 405",
+      "title": "READING AND CONFERENCE",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "",
+      "instructor": "Staff",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 406",
+      "title": "PROJECTS",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "",
+      "instructor": "D. Lynn",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 431",
+      "title": "FAMILY, SCHOOL, AND COMMUNITY COLLABORATION",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 10-11:20a",
+      "instructor": "C. Fischer",
+      "source_term": "202503",
+      "requirement_categories": [
+        "HDFS Elective"
+      ],
+      "prerequisites": [
+        "HDFS 311",
+        "HDFS 313"
+      ],
+      "credits": 3,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 432",
+      "title": "CHILDREN AND YOUTH WITH DISABILITIES",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 12-1:20p",
+      "instructor": "C. Fischer",
+      "source_term": "202503",
+      "requirement_categories": [
+        "HDFS Elective"
+      ],
+      "prerequisites": [],
+      "credits": 3,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 433",
+      "title": "EARLY CHILDHOOD INTERNSHIP",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "M 5:30-7:20p",
+      "instructor": "K. Coates",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 444",
+      "title": "FAMILY VIOLENCE AND NEGLECT",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 12-1:50p",
+      "instructor": "S. Landon",
+      "source_term": "202502",
+      "requirement_categories": [
+        "HDFS Elective"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 447",
+      "title": "*FAMILIES AND POVERTY",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "MW 10-11:20a",
+      "instructor": "D. Lynn",
+      "source_term": "202501",
+      "requirement_categories": [
+        "HDFS Elective",
+        "Bacc Core: Contemporary Global Issues"
+      ],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 461",
+      "title": "^PROGRAM DEVELOPMENT AND PROPOSAL WRITING",
+      "terms_offered": [
+        "Spring"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 8-9:50a",
+      "instructor": "T. Hogue",
+      "source_term": "202503",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 462",
+      "title": "PROFESSIONAL HELPING SKILLS",
+      "terms_offered": [
+        "Winter"
+      ],
+      "section": "501",
+      "meeting_pattern": "TR 10-11:50a",
+      "instructor": "D. Lynn",
+      "source_term": "202502",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    },
+    {
+      "course_code": "HDFS 469",
+      "title": "HUMAN SERVICES INTERNSHIP",
+      "terms_offered": [
+        "Fall"
+      ],
+      "section": "501",
+      "meeting_pattern": "T 2-3:50p",
+      "instructor": "D. Lynn",
+      "source_term": "202501",
+      "requirement_categories": [],
+      "prerequisites": [],
+      "credits": 4,
+      "category": "HDFS Elective"
+    }
+  ],
+  "degree_requirements": {
+    "psychology_bs": {
+      "name": "Psychology B.S.",
+      "total_credits": 61,
+      "categories": {
+        "psychology_core": {
+          "name": "Psychology Core",
+          "required_courses": [
+            "PSY 201Z",
+            "PSY 202Z",
+            "PSY 211 or PSY 311",
+            "Writing II"
+          ],
+          "required_credits": 13
+        },
+        "psychology_methods": {
+          "name": "Psychology Methods",
+          "required_courses": [
+            "PSY 297",
+            "PSY 298",
+            "PSY 301"
+          ],
+          "alternative_courses": [
+            "ST 351 & ST 352"
+          ],
+          "required_credits": 12
+        },
+        "psychology_survey": {
+          "name": "Psychology Survey",
+          "required_courses": [],
+          "required_credits": 16,
+          "note": "Must take one from each pair (330/340, 350/360, 370/381) plus one additional",
+          "course_options": [
+            "PSY 330",
+            "PSY 340",
+            "PSY 350",
+            "PSY 360",
+            "PSY 370",
+            "PSY 381"
+          ]
+        },
+        "psychology_cultural_competency": {
+          "name": "Psychology Cultural Competency",
+          "required_credits": 4,
+          "course_options": [
+            "PSY 426",
+            "PSY 427",
+            "PSY 462",
+            "PSY 488"
+          ]
+        },
+        "psychology_advanced": {
+          "name": "Psychology Advanced",
+          "required_credits": 12,
+          "course_options": [
+            "PSY 482",
+            "PSY 498",
+            "PSY 499",
+            "PSY 426",
+            "PSY 488"
+          ]
+        },
+        "psychology_capstone": {
+          "name": "Psychology Capstone",
+          "required_courses": [
+            "PSY 411"
+          ],
+          "required_credits": 4
+        },
+        "psychology_research": {
+          "name": "Psychology Research",
+          "required_courses": [
+            "PSY 401"
+          ],
+          "required_credits": 4,
+          "note": "Four 1-credit sections"
+        }
+      }
+    },
+    "hdfs_minor": {
+      "name": "Human Development & Family Sciences Minor",
+      "total_credits": 28,
+      "categories": {
+        "hdfs_core": {
+          "name": "HDFS Core",
+          "required_courses": [
+            "HDFS 201",
+            "HDFS 311",
+            "HDFS 313",
+            "HDFS 314",
+            "HDFS 341"
+          ],
+          "required_credits": 19
+        },
+        "hdfs_electives": {
+          "name": "HDFS Electives",
+          "required_credits": 9,
+          "course_options": [
+            "HDFS 240",
+            "HDFS 262",
+            "HDFS 360",
+            "HDFS 312",
+            "HDFS 431",
+            "HDFS 432",
+            "HDFS 444",
+            "HDFS 447",
+            "HDFS 460"
+          ]
+        }
+      }
+    }
+  },
+  "term_offerings": {
+    "Fall 2024": [
+      "PSY 202Z",
+      "PSY 297",
+      "PSY 381",
+      "PSY 350",
+      "PSY 401",
+      "PSY 410",
+      "PSY 411",
+      "PSY 488",
+      "HDFS 201",
+      "HDFS 240",
+      "HDFS 311",
+      "HDFS 312",
+      "HDFS 341",
+      "HDFS 360",
+      "HDFS 447"
+    ],
+    "Winter 2025": [
+      "PSY 201Z",
+      "PSY 298",
+      "PSY 360",
+      "PSY 330",
+      "PSY 401",
+      "PSY 410",
+      "PSY 426",
+      "PSY 499",
+      "HDFS 260",
+      "HDFS 262",
+      "HDFS 313",
+      "HDFS 330",
+      "HDFS 444"
+    ],
+    "Spring 2025": [
+      "PSY 202Z",
+      "PSY 211",
+      "PSY 311",
+      "PSY 301",
+      "PSY 370",
+      "PSY 401",
+      "PSY 410",
+      "PSY 482",
+      "PSY 498",
+      "HDFS 314",
+      "HDFS 331",
+      "HDFS 431",
+      "HDFS 432"
+    ]
+  }
+}

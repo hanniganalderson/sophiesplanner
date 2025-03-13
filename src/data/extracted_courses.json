@@ -1,0 +1,4952 @@
+[
+    {
+        "course_code": "AEC 352",
+        "title": "*ENVIRONMENTAL ECONOMICS AND POLICY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4:30-5:50p",
+        "instructor": "R. Hartwell",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ALS 199",
+        "title": "SPECIAL TOPICS: ST/ACADEMIC PERSONAL SUCCESS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 9-9:50a",
+        "instructor": "J. Hoffmann",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ALS 299",
+        "title": "SPECIAL TOPICS: ST/ PRE-INTERNSHIP SEMINAR",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9-9:50a",
+        "instructor": "J. Hoffmann",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ALS 299",
+        "title": "SPECIAL TOPICS: ST/GAINING REAL WORLD EXPERI",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "AMS 450",
+        "title": "PRAGMATISM IN AMERICAN CULTURE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "B. Engel",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ANTH 210",
+        "title": "*INTRODUCTION TO CULTURAL ANTHROPOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8:30-9:50a",
+        "instructor": "C. Cappy",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ANTH 251",
+        "title": "*LANGUAGE IN THE USA",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "J. Gesme",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ANTH 315",
+        "title": "*PEOPLES OF THE WORLD-AFRICA",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:20a",
+        "instructor": "C. Cappy",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ANTH 352",
+        "title": "*ANTHROPOLOGY, HEALTH, AND ENVIRONMENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8:30-9:50a",
+        "instructor": "C. Cappy",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ANTH 380",
+        "title": "*GLOBAL CONFLICTS: ANTHROPOLOGICAL PERSPECTIVES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "P. Longmire",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 101",
+        "title": "*INTRODUCTION TO THE VISUAL ARTS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12:30-1:50p",
+        "instructor": "B. Engel",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 115",
+        "title": "2-D CORE STUDIO",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 9-11:50a",
+        "instructor": "A. Lorish",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 117",
+        "title": "3-D CORE STUDIO",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-4:50p",
+        "instructor": "L. Seiffert",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 121",
+        "title": "DIGITAL CORE STUDIO",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "TR 2-4:50p",
+        "instructor": "B. Winters",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 131",
+        "title": "DRAWING CORE STUDIO",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 9-11:50a",
+        "instructor": "A. Lorish",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 204",
+        "title": "*INTRODUCTION TO WESTERN ART: PREHISTORY TO HIGH MIDDLE AGES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2:30-3:50p",
+        "instructor": "E. Bodfish",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 205",
+        "title": "*INTRODUCTION TO WESTERN ART: GOTHIC TO BAROQUE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12:30-1:50p",
+        "instructor": "E. Bodfish",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 210",
+        "title": "*HISTORY OF WESTERN ARCHITECTURE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "B. Engel",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ART 215",
+        "title": "COLOR IN THE VISUAL ARTS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "A. Lorish",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 222",
+        "title": "INTRODUCTION TO TIME-BASED ART",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 5-7:50p",
+        "instructor": "L. Seiffert",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 263",
+        "title": "DIGITAL PHOTOGRAPHY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 5-7:50p",
+        "instructor": "B. Winters",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 281",
+        "title": "PAINTING I",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-2:50p",
+        "instructor": "A. Lorish",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ART 331",
+        "title": "DRAWING CONCEPTS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9a-1:50p",
+        "instructor": "A. Lorish",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 339",
+        "title": "PROFESSIONAL PRACTICES FOR ARTISTS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "L. Seiffert",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ART 349",
+        "title": "VIDEO ART",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-2:50p",
+        "instructor": "L. Seiffert",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ART 366",
+        "title": "ART SINCE 1945",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8:30-9:50a",
+        "instructor": "E. Bodfish",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 367",
+        "title": "*HISTORY OF DESIGN",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2:30-3:50p",
+        "instructor": "B. Engel",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 375",
+        "title": "PRINTMAKING: RELIEF",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 9-11:50a",
+        "instructor": "A. Lorish",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 382",
+        "title": "PAINTING II: CONCEPTS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-2:50p",
+        "instructor": "A. Lorish",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ART 386",
+        "title": "A CULTURAL HISTORY OF AMERICAN ART AND LITERATURE: PART I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "E. Bodfish",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 387",
+        "title": "A CULTURAL HISTORY OF AMERICAN ART AND LITERATURE: PART II",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "J. Wheeler",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 388",
+        "title": "A CULTURAL HISTORY OF AMERICAN ART AND LITERATURE: PART III",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "E. Bodfish",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ART 403",
+        "title": "THESIS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 10-11:50a",
+        "instructor": "B. Engel",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 406",
+        "title": "PROJECTS: PROJECTS/SNOPLANKS ACADEMY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 411",
+        "title": "^ART IN CONTEXT HISTORICAL AND CRITICAL APPROACHES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "J. Wheeler",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 422",
+        "title": "NEW MEDIA: INTERACTIVE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-4:50p",
+        "instructor": "K. Fletcher",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ART 451",
+        "title": "INTRODUCTION TO ARTS ENTREPRENEURSHIP",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "B. Winters",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ART 475",
+        "title": "PRINTMAKING STUDIO",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9a-1:50p",
+        "instructor": "A. Lorish",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ART 499",
+        "title": "SPECIAL TOPICS: ST/ CULTURAL HIST OF AMER ART",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "J. Wheeler",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ATS 201",
+        "title": "+*CLIMATE SCIENCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 9-9:50a",
+        "instructor": "S. Ganzhorn",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 160",
+        "title": "B-ENGAGED",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "T. Marr",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 161",
+        "title": "INNOVATION NATION--AWARENESS TO ACTION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "T. Marr",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 162",
+        "title": "INNOVATION NATION--IDEAS TO REALITY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "N. Seeley",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 211Z",
+        "title": "PRINCIPLES OF FINANCIAL ACCOUNTING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "N. Rush",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 213Z",
+        "title": "PRINCIPLES OF  MANAGERIAL ACCOUNTING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "N. Rush",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 230",
+        "title": "BUSINESS LAW I",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "K. Toney",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 252",
+        "title": "MANAGING INDIVIDUAL AND TEAM PERFORMANCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 12-1:50p",
+        "instructor": "S. Howes",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 260",
+        "title": "FOUNDATIONS OF THE ENTREPRENEURIAL MINDSET",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 6-7:50p",
+        "instructor": "T. Laurence",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 270",
+        "title": "BUSINESS PROCESS MANAGEMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "D. Ribbink",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 275",
+        "title": "FOUNDATIONS OF STATISTICAL INFERENCE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "P. Baldivieso",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 281",
+        "title": "PROFESSIONAL DEVELOPMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 10-11:20a",
+        "instructor": "K. Vierra",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 282",
+        "title": "DRAFTING YOUR CAREER BLUEPRINT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 10-10:50a",
+        "instructor": "K. Vierra",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 283",
+        "title": "NAVIGATING CRUCIAL CONVERSATIONS IN THE WORKPLACE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 12-12:50p",
+        "instructor": "K. Vierra",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 284",
+        "title": "FOUNDATIONS OF PERSONAL FINANCE I",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 10-10:50a",
+        "instructor": "K. Vierra",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 311",
+        "title": "FRAMING YOUR CAREER PLAN",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 2-2:50p",
+        "instructor": "K. Vierra",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 312",
+        "title": "FOUNDATIONS OF PERSONAL FINANCE II",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 2-2:50p",
+        "instructor": "K. Vierra",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 313",
+        "title": "A CASE FOR CIVIL DISCOURSE IN BUSINESS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 10-10:50a",
+        "instructor": "K. Vierra",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 314",
+        "title": "SUSTAINABLE BUSINESS OPERATIONS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "D. Ribbink",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 315",
+        "title": "ACCOUNTING FOR DECISION MAKING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "N. Rush",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 347",
+        "title": "INTERNATIONAL BUSINESS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "W. Warne",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 352",
+        "title": "MANAGING INDIVIDUAL AND TEAM PERFORMANCE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "S. Howes",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 354",
+        "title": "^MANAGING ETHICS AND CORPORATE SOCIAL RESPONSIBILITY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "502",
+        "meeting_pattern": "R 12-1:50p",
+        "instructor": "A. Aghdaei",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 357",
+        "title": "OPERATIONS AND SUPPLY CHAIN MANAGEMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "D. Ribbink",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 360",
+        "title": "INTRODUCTION TO FINANCIAL MANAGEMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "N. Rush",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 361",
+        "title": "IDEATION AND CREATIVE THINKING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "W. Forster",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 363",
+        "title": "INNOVATION MANAGEMENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 4-5:50p",
+        "instructor": "W. Forster",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 370",
+        "title": "BUSINESS INFORMATION SYSTEMS OVERVIEW",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "T. Montgomery",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 375",
+        "title": "APPLIED QUANTITATIVE METHODS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "P. Baldivieso",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 381",
+        "title": "PERSONAL AND PROFESSIONAL DEVELOPMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 12-1:50p",
+        "instructor": "K. Vierra",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 390",
+        "title": "PRINCIPLES OF MARKETING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "T. Marr",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 406",
+        "title": "PROJECTS: PROJECTS/SNOPLANKS ACADEMY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 411",
+        "title": "NAVIGATING CAREER TRANSITIONS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 2-2:50p",
+        "instructor": "K. Vierra",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BA 412",
+        "title": "FINANCIAL PLANNING I",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-2:50p",
+        "instructor": "K. Vierra",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 413",
+        "title": "FINANCIAL PLANNING II",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 4-4:50p",
+        "instructor": "K. Vierra",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 460",
+        "title": "VENTURE MANAGEMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "W. Forster",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BA 464",
+        "title": "NEW VENTURE FINANCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "J. Elston",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BA 466",
+        "title": "INTEGRATIVE STRATEGIC EXPERIENCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 10-11:50a",
+        "instructor": "D. Ribbink",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BB 314",
+        "title": "CELL AND MOLECULAR BIOLOGY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "E. Forsythe",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BB 315",
+        "title": "MOLECULAR BIOLOGY LABORATORY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 9-9:50a",
+        "instructor": "K. Smith",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BB 332",
+        "title": "*MOLECULAR MEDICINE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "P. Ball",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BB 345",
+        "title": "PYTHON FOR MOLECULAR BIOLOGISTS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "E. Forsythe",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BB 450",
+        "title": "GENERAL BIOCHEMISTRY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "K. Smith",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BB 451",
+        "title": "GENERAL BIOCHEMISTRY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "K. Smith",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BB 481",
+        "title": "MACROMOLECULAR STRUCTURE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "M. Cotten",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BB 485",
+        "title": "APPLIED BIOINFORMATICS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "E. Forsythe",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BB 490",
+        "title": "BIOCHEMISTRY 1: STRUCTURE AND FUNCTION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "M. Cotten",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BB 491",
+        "title": "BIOCHEMISTRY 2: METABOLISM",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "M. Cotten",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BB 492",
+        "title": "BIOCHEMISTRY 3: GENETIC BIOCHEMISTRY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:20a",
+        "instructor": "K. Smith",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BI 101",
+        "title": "*ENVIRONMENTAL BIOLOGY: ECOLOGY, CONSERVATION, GLOBAL CHANGE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "I. Moore",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BI 102",
+        "title": "*ANIMAL BIOLOGY: GENES, BEHAVIOR AND EVOLUTION OF LIFE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "I. Moore",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BI 103",
+        "title": "*HUMAN BIOLOGY: ANATOMY, PHYSIOLOGY AND DISEASE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "I. Moore",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BI 197",
+        "title": "PROFESSIONAL DEVELOPMENT I: HEALTH PROFESSIONS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 12-12:50p",
+        "instructor": "P. Ball",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BI 198",
+        "title": "PROFESSIONAL DEVELOPMENT I: BIOLOGY AND ZOOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 10-10:50a",
+        "instructor": "P. Ball",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BI 221",
+        "title": "*PRINCIPLES OF BIOLOGY: CELLS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "P. Ball",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BI 221H",
+        "title": "*PRINCIPLES OF BIOLOGY: CELLS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "P. Ball",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BI 222",
+        "title": "*PRINCIPLES OF BIOLOGY: ORGANISMS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "I. Moore",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BI 223",
+        "title": "*PRINCIPLES OF BIOLOGY: POPULATIONS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "I. Moore",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BI 231",
+        "title": "INTRODUCTION TO HUMAN ANATOMY AND PHYSIOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 9-9:50a",
+        "instructor": "B. Tanis",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BI 232",
+        "title": "INTRODUCTION TO HUMAN ANATOMY AND PHYSIOLOGY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 8-8:50a",
+        "instructor": "B. Tanis",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BI 233",
+        "title": "INTRODUCTION TO HUMAN ANATOMY AND PHYSIOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 8-8:50a",
+        "instructor": "B. Tanis",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BI 241",
+        "title": "INTRODUCTION TO HUMAN ANATOMY AND PHYSIOLOGY LABORATORY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "512",
+        "meeting_pattern": "F 3-5:50p",
+        "instructor": "B. Tanis",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BI 242",
+        "title": "INTRODUCTION TO HUMAN ANATOMY AND PHYSIOLOGY LABORATORY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "510",
+        "meeting_pattern": "F 3-5:50p",
+        "instructor": "B. Tanis",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BI 243",
+        "title": "INTRODUCTION TO HUMAN ANATOMY AND PHYSIOLOGY LABORATORY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "510",
+        "meeting_pattern": "F 3-5:50p",
+        "instructor": "B. Tanis",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BI 311",
+        "title": "GENETICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "K. Smith",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "BI 319",
+        "title": "^THEORY, PRACTICE AND DISCOURSE IN THE LIFE SCIENCES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2:30-3:50p",
+        "instructor": "K. Smith",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BI 370",
+        "title": "ECOLOGY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:20a",
+        "instructor": "M. Orr",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "BI 371",
+        "title": "^ECOLOGICAL METHODS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 12-4:50p",
+        "instructor": "M. Orr",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "BI 375",
+        "title": "FIELD METHODS IN ECOLOGICAL RESTORATION",
+        "terms_offered": [
+            "Summer"
+        ],
+        "section": "501",
+        "meeting_pattern": "MTWRFSU 8a-4:50p",
+        "instructor": "M. Orr",
+        "source_term": "202600"
+    },
+    {
+        "course_code": "BI 445",
+        "title": "EVOLUTION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "E. Forsythe",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CH 121",
+        "title": "GENERAL CHEMISTRY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "S. Towne",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CH 122",
+        "title": "*GENERAL CHEMISTRY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "S. Towne",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CH 123",
+        "title": "*GENERAL CHEMISTRY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "M. Johnson",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CH 201",
+        "title": "CHEMISTRY FOR ENGINEERING MAJORS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "S. Towne",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CH 202",
+        "title": "CHEMISTRY FOR ENGINEERING MAJORS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "502",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "S. Towne",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CH 205",
+        "title": "LABORATORY FOR CH 202",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 12:30-3:20p",
+        "instructor": "S. Towne",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CH 231",
+        "title": "GENERAL CHEMISTRY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "S. Geddes",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CH 232",
+        "title": "GENERAL CHEMISTRY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "S. Geddes",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CH 233",
+        "title": "GENERAL CHEMISTRY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "S. Geddes",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CH 261",
+        "title": "*LABORATORY FOR CHEMISTRY 231",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "511",
+        "meeting_pattern": "T 2-4:50p",
+        "instructor": "M. Johnson",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CH 262",
+        "title": "*LABORATORY FOR CHEMISTRY 232",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "510",
+        "meeting_pattern": "T 2-4:50p",
+        "instructor": "N. Garcia Ivers",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CH 263",
+        "title": "*LABORATORY FOR CHEMISTRY 233",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "510",
+        "meeting_pattern": "T 2-4:50p",
+        "instructor": "N. Garcia Ivers",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CH 324",
+        "title": "QUANTITATIVE ANALYSIS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MF 8-11:50a",
+        "instructor": "S. Geddes",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CH 331",
+        "title": "ORGANIC CHEMISTRY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "J. Gautschi",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CH 332",
+        "title": "ORGANIC CHEMISTRY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "J. Gautschi",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CH 334",
+        "title": "ORGANIC CHEMISTRY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12:30-1:50p",
+        "instructor": "J. Gautschi",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CH 335",
+        "title": "ORGANIC CHEMISTRY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12:30-1:50p",
+        "instructor": "J. Gautschi",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CH 336",
+        "title": "ORGANIC CHEMISTRY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "J. Gautschi",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CH 337",
+        "title": "ORGANIC CHEMISTRY LABORATORY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 10-11:50a",
+        "instructor": "J. Gautschi",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "COMM 111Z",
+        "title": "+*PUBLIC SPEAKING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "N. Dahl",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "COMM 114",
+        "title": "*ARGUMENT AND CRITICAL DISCOURSE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:20p",
+        "instructor": "N. Dahl",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "COMM 218Z",
+        "title": "+*INTERPERSONAL COMMUNICATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "N. Dahl",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "COMM 316",
+        "title": "ADVANCED PERSUASION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "N. Dahl",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "COMM 320",
+        "title": "INTRODUCTION TO RHETORICAL THEORY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 4-5:20p",
+        "instructor": "N. Dahl",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "COMM 321",
+        "title": "INTRODUCTION TO COMMUNICATION THEORY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "N. Dollar",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "COMM 323",
+        "title": "COMMUNITY DIALOGUE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "N. Dollar",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "COMM 326",
+        "title": "INTERCULTURAL COMMUNICATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:20a",
+        "instructor": "N. Dollar",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "COMM 425",
+        "title": "COMMUNICATION AND YOUTH OUTREACH",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "N. Dollar",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "COMM 466",
+        "title": "ETHICS OF RHETORIC",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "J. Porter",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 162",
+        "title": "INTRODUCTION TO COMPUTER SCIENCE II",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "M. Tucker",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 261",
+        "title": "DATA STRUCTURES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 12-1:50p",
+        "instructor": "K. Bernard",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 271",
+        "title": "COMPUTER ARCHITECTURE AND ASSEMBLY LANGUAGE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "P. Donnelly",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 290",
+        "title": "WEB DEVELOPMENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 8-9:50a",
+        "instructor": "D. White",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 325",
+        "title": "ANALYSIS OF ALGORITHMS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "B. Hall",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 331",
+        "title": "INTRODUCTION TO ARTIFICIAL INTELLIGENCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "R. Churchill",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 340",
+        "title": "INTRODUCTION TO DATABASES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "P. Donnelly",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 352",
+        "title": "INTRODUCTION TO USABILITY ENGINEERING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "D. White",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 361",
+        "title": "SOFTWARE ENGINEERING I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "B. Hall",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 362",
+        "title": "SOFTWARE ENGINEERING II",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "B. Hall",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 372",
+        "title": "INTRODUCTION TO COMPUTER NETWORKS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "B. Hall",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 374",
+        "title": "OPERATING SYSTEMS I",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "B. Hall",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 381",
+        "title": "PROGRAMMING LANGUAGE FUNDAMENTALS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 10-11:50a",
+        "instructor": "P. Donnelly",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 391",
+        "title": "*SOCIAL AND ETHICAL ISSUES IN COMPUTER SCIENCE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:20p",
+        "instructor": "B. Hall",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 434",
+        "title": "MACHINE LEARNING AND DATA MINING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "P. Donnelly",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 444",
+        "title": "OPERATING SYSTEMS II",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "B. Hall",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 461",
+        "title": "^SENIOR SOFTWARE ENGINEERING PROJECT I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "J. Wiener",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 462",
+        "title": "^SENIOR SOFTWARE ENGINEERING PROJECT II",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 12-1:50p",
+        "instructor": "J. Wiener",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 463",
+        "title": "SENIOR SOFTWARE ENGINEERING PROJECT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 10-10:50a",
+        "instructor": "K. Bernard",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 464",
+        "title": "OPEN SOURCE SOFTWARE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 11a-12:50p",
+        "instructor": "S. Hedaoo",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 466",
+        "title": "WEB-BASED START-UP PROJECT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 8-9:50a",
+        "instructor": "J. Rosenzweig",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 475",
+        "title": "INTRODUCTION TO PARALLEL PROGRAMMING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "J. Rosenzweig",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "CS 478",
+        "title": "NETWORK SECURITY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 6-7:50p",
+        "instructor": "D. Alberghetti",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 492",
+        "title": "MOBILE SOFTWARE DEVELOPMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "D. White",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "CS 493",
+        "title": "CLOUD APPLICATION DEVELOPMENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "B. Hall",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "CS 494",
+        "title": "ADVANCED WEB DEVELOPMENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "D. White",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "DSGN 341",
+        "title": "DESIGN THINKING AND PROCESS INNOVATION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "N. Morrison",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ECE 271",
+        "title": "DIGITAL LOGIC DESIGN",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "S. Riley",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ECE 272",
+        "title": "DIGITAL LOGIC DESIGN LABORATORY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 12-1:50p",
+        "instructor": "S. Riley",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ECE 322",
+        "title": "ELECTRONICS I",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:20a",
+        "instructor": "K. Webb",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ECON 201",
+        "title": "+*INTRODUCTION TO MICROECONOMICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "N. Rush",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ECON 202",
+        "title": "+*INTRODUCTION TO MACROECONOMICS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "N. Rush",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ECON 315",
+        "title": "INTERMEDIATE MACROECONOMIC THEORY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "S. Baldivieso",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ED 216",
+        "title": "*PURPOSE, STRUCTURE, AND FUNCTION OF EDUCATION IN A DEMOCRACY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "C. Fischer",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ED 219",
+        "title": "*SOCIAL JUSTICE,CIVIL RIGHTS & MULTICULTURALISM IN EDUCATION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 5:30-8:20p",
+        "instructor": "K. Coates",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ED 394",
+        "title": "DIFFERENTIATION IN THE ELEMENTARY CLASSROOM",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 8-9:50a",
+        "instructor": "S. Landon",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 409",
+        "title": "PRACTICUM/CLINICAL EXPERIENCE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 9-9:50a",
+        "instructor": "J. Wendt",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ED 410",
+        "title": "INTERNSHIP/WORK EXPERIENCE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 12-1:50p",
+        "instructor": "R. Schuetz",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ED 413",
+        "title": "LEARNING ENVIRONMENTS I: FOSTERING CLASS ENGAGEMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 8-10:50a",
+        "instructor": "R. Schuetz",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ED 414",
+        "title": "LEARNING ENVIRONMENTS II: ADVANCING EVERY STUDENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 2-3:50p",
+        "instructor": "C. Fischer",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 450",
+        "title": "FOUNDATIONS OF EDUCATION AND PLANNING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "R. Cole",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 451",
+        "title": "^ASSESSMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 1-3:50p",
+        "instructor": "R. Schuetz",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ED 452",
+        "title": "USING DATA TO SUPPORT ALL STUDENTS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 8-11:50a",
+        "instructor": "C. Fischer",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 457",
+        "title": "TEACHING ELEMENTARY MATHEMATICS FOR UNDERSTANDING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 4-6:50p",
+        "instructor": "R. Schuetz",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ED 465",
+        "title": "ELEMENTARY METHODS: LITERACY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "J. Wendt",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ED 466",
+        "title": "ELEMENTARY METHODS II: MATHEMATICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "F 8-11:50a",
+        "instructor": "M. Knapp",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ED 467",
+        "title": "ELEMENTARY METHODS III: NATURAL AND SOCIAL SCIENCE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "RF 8-11:50a",
+        "instructor": "R. Schuetz",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 468",
+        "title": "ELEMENTARY METHODS IV: LANGUAGE ARTS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 4-5:50p; R 7:15-10:45a",
+        "instructor": "L. Gehrig",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 472",
+        "title": "FOUNDATIONS OF ESOL EDUCATION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 4-6:50p",
+        "instructor": "C. Denson-Hill",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 473",
+        "title": "INSTRUCTIONAL APPROACHES FOR ESOL EDUCATION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 5-7:50p",
+        "instructor": "C. Denson-Hill",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ED 476",
+        "title": "PARTNERSHIPS AND IDEOLOGIES IN ESOL EDUCATION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 5-7:50p",
+        "instructor": "L. Huet",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ED 477",
+        "title": "DIFFERENTIATION FOR STUDENTS WITH SPECIAL NEEDS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 5-7:50p",
+        "instructor": "S. Landon",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ED 478",
+        "title": "SPECIAL EDUCATION LAW RIGHTS AND REGULATIONS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 5-7:50p",
+        "instructor": "S. Landon",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ED 479",
+        "title": "LINGUISTICS FOR TEACHERS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 4-6:50p",
+        "instructor": "C. Denson-Hill",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENG 212",
+        "title": "*LITERATURES OF THE WORLD: MESO/SOUTH AMERICA, CARIBBEAN",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "J. Reimer",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ENG 240",
+        "title": "*INTRODUCTION TO ENVIRONMENTAL LITERATURE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "B. Martin",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENG 253",
+        "title": "*SURVEY OF AMERICAN LITERATURE: COLONIAL TO 1900",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "C. Snyder",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ENG 254",
+        "title": "*SURVEY OF AMERICAN LITERATURE: 1900 TO PRESENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "C. Snyder",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENG 360",
+        "title": "*NATIVE AMERICAN LITERATURE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "J. Reimer",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENG 386",
+        "title": "A CULTURAL HISTORY OF AMERICAN ART AND LITERATURE: PART I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "E. Bodfish",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENG 387",
+        "title": "A CULTURAL HISTORY OF AMERICAN ART AND LITERATURE: PART II",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "J. Wheeler",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ENG 388",
+        "title": "A CULTURAL HISTORY OF AMERICAN ART AND LITERATURE: PART III",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "E. Bodfish",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENG 438",
+        "title": "STUDIES IN LITERATURE AFTER 1900",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "J. Reimer",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENG 445",
+        "title": "^STUDIES IN NONFICTION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "M. Cooper",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENGR 100",
+        "title": "THE OREGON STATE ENGINEERING STUDENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 2-3:50p",
+        "instructor": "D. White",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENGR 102",
+        "title": "DESIGN ENGINEERING AND PROBLEM SOLVING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 9-9:50a",
+        "instructor": "K. Webb",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ENGR 103",
+        "title": "ENGINEERING COMPUTATION AND ALGORITHMIC THINKING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 10-11:50a",
+        "instructor": "D. White",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENGR 201",
+        "title": "ELECTRICAL FUNDAMENTALS I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-10:50a",
+        "instructor": "S. Riley",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENGR 202",
+        "title": "ELECTRICAL FUNDAMENTALS II",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-10:50a",
+        "instructor": "K. Webb",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ENGR 211",
+        "title": "STATICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 1-1:50p",
+        "instructor": "C. Lanaud",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENGR 213",
+        "title": "STRENGTH OF MATERIALS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10:30-11:50a",
+        "instructor": "K. Martin",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENGR 248",
+        "title": "ENGINEERING GRAPHICS AND 3-D MODELING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 9-9:50a",
+        "instructor": "X. Zhang",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ENGR 390",
+        "title": "ENGINEERING ECONOMY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "MW 8:30-9:50a",
+        "instructor": "S. Riley",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENGR 415",
+        "title": "^ENGINEERING CAPSTONE DESIGN 1",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "S. Riley",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENGR 416",
+        "title": "^ENGINEERING CAPSTONE DESIGN 2",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "S. Riley",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ENSC 101",
+        "title": "ENVIRONMENTAL SCIENCES ORIENTATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 9-9:50a",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ENSC 221",
+        "title": "ENVIRONMENTAL FIELD STUDIES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 7:30-11:20p; F 12-3:50p",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ENSC 321",
+        "title": "^ENVIRONMENTAL CASE STUDIES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ES 101",
+        "title": "*INTRODUCTION TO ETHNIC STUDIES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "J. Reimer",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ES 211",
+        "title": "*INTRODUCTION TO LATINO/A STUDIES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "M. Gomez",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ES 241",
+        "title": "*INTRODUCTION TO NATIVE AMERICAN STUDIES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "M. Gomez",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ESC 322",
+        "title": "ELECTRONICS I LABORATORY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 12-1:50p",
+        "instructor": "K. Webb",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ESC 331",
+        "title": "INTRODUCTORY FLUID MECHANICS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "R. Webb",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ESC 332",
+        "title": "INTRODUCTORY HEAT TRANSFER",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "R. Webb",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ESC 340",
+        "title": "INTRODUCTION TO EXPERIMENTATION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "R. Webb",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ESC 440",
+        "title": "NUMERICAL METHODS FOR ENGINEERS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "K. Webb",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ESE 330",
+        "title": "MODELING AND ANALYSIS OF DYNAMIC SYSTEMS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "K. Webb",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ESE 355",
+        "title": "ENERGY REGULATION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "R. Phelps",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ESE 360",
+        "title": "ENERGY CONSUMPTION ANALYSIS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "R. Webb",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ESE 430",
+        "title": "FEEDBACK CONTROL SYSTEMS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "K. Webb",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ESE 450",
+        "title": "ENERGY GENERATION SYSTEMS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "C. Hagen",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ESE 470",
+        "title": "ENERGY DISTRIBUTION SYSTEMS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "S. Riley",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ESE 471",
+        "title": "ENERGY STORAGE SYSTEMS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "502",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "S. Riley",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ESE 499",
+        "title": "SPECIAL TOPICS: ST/ FINITE ELEMENT ANALYSIS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "C. Lanaud",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "FES 341",
+        "title": "FOREST ECOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 10-11:50a",
+        "instructor": "S. Ganzhorn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "FES 342",
+        "title": "FOREST TYPES OF THE NORTHWEST",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 10-11:50a",
+        "instructor": "S. Ganzhorn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "FES 422",
+        "title": "RESEARCH METHODS IN SOCIAL SCIENCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "K. Lindberg",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "FES 428",
+        "title": "METHODS FOR ANALYZING QUANTITATIVE SOCIAL SCIENCE DATA",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:20p",
+        "instructor": "K. Lindberg",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "FES 440",
+        "title": "WILDLAND FIRE ECOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "S. Ganzhorn",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "FES 445",
+        "title": "ECOLOGICAL RESTORATION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "FES 485",
+        "title": "*CONSENSUS AND NATURAL RESOURCES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "FW 255",
+        "title": "FIELD SAMPLING OF FISH AND WILDLIFE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 10-11:20a",
+        "instructor": "M. Shinderman",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "FW 323",
+        "title": "MANAGEMENT PRINCIPLES OF PACIFIC SALMON IN THE NORTHWEST",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12:30-1:50p",
+        "instructor": "S. Herzog",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "FW 326",
+        "title": "INTEGRATED WATERSHED MANAGEMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "S. Herzog",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "FW 350",
+        "title": "*ENDANGERED SPECIES, SOCIETY AND SUSTAINABILITY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "M. Shinderman",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "FW 370",
+        "title": "CONSERVATION GENETICS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 9-9:50a; M 10-11:50a",
+        "instructor": "S. Ganzhorn",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "GD 110",
+        "title": "GRAPHIC DESIGN TOOLS AND TECHNIQUES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "MWF 8-9:50a",
+        "instructor": "K. Dunbar",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "GD 210",
+        "title": "GRAPHIC DESIGN I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 10-11:50a",
+        "instructor": "J. Hansel",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "GD 310",
+        "title": "GRAPHIC DESIGN 2: INTERMEDIATE GRAPHIC DESIGN",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 12-1:50p",
+        "instructor": "J. Hansel",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "GD 440",
+        "title": "USER RESEARCH FOR GRAPHIC DESIGNERS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 12-1:50p",
+        "instructor": "J. Hansel",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "GEO 221",
+        "title": "*ENVIRONMENTAL GEOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MWF 8-8:50a",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "GEOG 333",
+        "title": "*ENVIRONMENTAL JUSTICE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "K. Stanton",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "GEOG 360",
+        "title": "GISCIENCE I: GEOGRAPHIC INFORMATION SYSTEMS AND THEORY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9-11:50a",
+        "instructor": "S. Ganzhorn",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "H 100",
+        "title": "INTRODUCTION TO PUBLIC HEALTH",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "J. Coughlin",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "HC 407",
+        "title": "SEMINAR: SEM/ BUILDINGS OF BEND",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 4-5:50p",
+        "instructor": "B. Engel",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "HC 407",
+        "title": "SEMINAR: SEM/ COMMUNICATING SCIENCE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 4-5:50p",
+        "instructor": "C. Browne",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HC 407",
+        "title": "SEMINAR: SEM/ CURATING CLIMATE CHANGE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "WRF 9a-6:50p",
+        "instructor": "R. Sinclair",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HC 407",
+        "title": "SEMINAR: SEM/ DRUGS IN SOCIETIES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "503",
+        "meeting_pattern": "F 9-9:50a",
+        "instructor": "B. Seal",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HC 408",
+        "title": "WORKSHOP: WS/ THESIS: STAGE 1&2",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 4-4:50p",
+        "instructor": "M. Arend",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 201",
+        "title": "*CONTEMPORARY FAMILIES IN THE U.S.",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "B. Pells",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 240",
+        "title": "*HUMAN SEXUALITY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12:30-1:50p",
+        "instructor": "S. Lipscomb",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 260",
+        "title": "*LIFE HACKS FOR EMOTIONAL INTELLIGENCE AND WELL-BEING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "S. Landon",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 262",
+        "title": "INTRODUCTION TO HUMAN SERVICES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "502",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "D. Lynn",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 310",
+        "title": "HUMAN SERVICES PRACTICUM",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "D. Lynn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 311",
+        "title": "INFANT AND CHILD DEVELOPMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "S. Landon",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 312",
+        "title": "PARENTING RESEARCH AND APPLICATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9a-12:50p",
+        "instructor": "C. Fischer",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 313",
+        "title": "ADOLESCENT DEVELOPMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 12-1:50p",
+        "instructor": "C. Fischer",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 314",
+        "title": "ADULT DEVELOPMENT AND AGING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 2-3:50p",
+        "instructor": "S. Landon",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "HDFS 330",
+        "title": "ENGAGING WITH CHILDREN AGES 0-8",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 4-5:50p",
+        "instructor": "S. Landon",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 331",
+        "title": "PRACTICUM IN CHILD DEVELOPMENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 4-5:20p",
+        "instructor": "L. Kealey",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "HDFS 341",
+        "title": "FAMILY STUDIES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "C. Fischer",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 360",
+        "title": "CRITICAL THINKING IN HUMAN DEVELOPMENT AND FAMILY SCIENCES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 12-1:50p",
+        "instructor": "D. Lynn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 361",
+        "title": "APPLIED RESEARCH METHODS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 431",
+        "title": "FAMILY, SCHOOL, AND COMMUNITY COLLABORATION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "C. Fischer",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "HDFS 432",
+        "title": "CHILDREN AND YOUTH WITH DISABILITIES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:20p",
+        "instructor": "C. Fischer",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "HDFS 433",
+        "title": "EARLY CHILDHOOD INTERNSHIP",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 5:30-7:20p",
+        "instructor": "K. Coates",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 444",
+        "title": "FAMILY VIOLENCE AND NEGLECT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "S. Landon",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 447",
+        "title": "*FAMILIES AND POVERTY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:20a",
+        "instructor": "D. Lynn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HDFS 461",
+        "title": "^PROGRAM DEVELOPMENT AND PROPOSAL WRITING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "T. Hogue",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "HDFS 462",
+        "title": "PROFESSIONAL HELPING SKILLS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "D. Lynn",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HDFS 469",
+        "title": "HUMAN SERVICES INTERNSHIP",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "D. Lynn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HHS 231",
+        "title": "*LIFETIME FITNESS FOR HEALTH",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-12:50p",
+        "instructor": "D. Montoya",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HST 106",
+        "title": "*WORLD HISTORY III: THE MODERN AND CONTEMPORARY WORLD",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:20p",
+        "instructor": "J. Rankin",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HST 201",
+        "title": "*HISTORY OF THE UNITED STATES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "J. Rankin",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "HST 202",
+        "title": "*HISTORY OF THE UNITED STATES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "J. Rankin",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "HST 203",
+        "title": "*HISTORY OF THE UNITED STATES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "J. Rankin",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "IE 212",
+        "title": "COMPUTATIONAL METHODS FOR INDUSTRIAL ENGINEERING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "C. Lanaud",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "IE 415",
+        "title": "SIMULATION AND DECISION SUPPORT SYSTEMS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "C. Lanaud",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "IE 425",
+        "title": "INDUSTRIAL SYSTEMS OPTIMIZATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "C. Lanaud",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "IE 471",
+        "title": "PROJECT MANAGEMENT IN ENGINEERING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "C. Lanaud",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "KIN 131",
+        "title": "INTRODUCTION TO KINESIOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 1-1:50p",
+        "instructor": "J. Coughlin",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "KIN 206",
+        "title": "PROJECTS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 4-4:50p",
+        "instructor": "S. Jaime",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "KIN 206",
+        "title": "PROJECTS: PROJ/ TEAM DYNAMICS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "502",
+        "meeting_pattern": "M 9-9:50a",
+        "instructor": "S. Jaime",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 206",
+        "title": "PROJECTS: PROJ/BECOMING YOUR BEST SELF",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 1-1:50p",
+        "instructor": "J. Coughlin",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "KIN 307",
+        "title": "SEMINAR",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9-9:50a",
+        "instructor": "J. Hoffmann",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "KIN 307",
+        "title": "SEMINAR: SEM/ PRE-INTERNSHIP",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9-9:50a",
+        "instructor": "J. Hoffmann",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 311",
+        "title": "MOTOR BEHAVIOR",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "D. Phillips",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "KIN 312",
+        "title": "*SOCIOCULTURAL DIMENSIONS OF PHYSICAL ACTIVITY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 5-6:50p",
+        "instructor": "J. Coughlin",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "KIN 314",
+        "title": "INTRODUCTION TO ADAPTED PHYSICAL ACTIVITY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "J. Coughlin",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 321",
+        "title": "BIOMECHANICS OF HUMAN MOVEMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "D. Phillips",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 324",
+        "title": "EXERCISE PHYSIOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "S. Jaime",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "KIN 325",
+        "title": "FITNESS ASSESSMENT AND EXERCISE PRESCRIPTION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 10-11:50a",
+        "instructor": "S. Jaime",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 370",
+        "title": "PSYCHOLOGY OF SPORT AND PHYSICAL ACTIVITY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8:30-9:50a",
+        "instructor": "J. Coughlin",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 385",
+        "title": "THERAPEUTIC EXERCISE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "J. Torbett",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "KIN 394",
+        "title": "PROFESSIONAL ACTIVITIES: RESISTANCE TRAINING PROGRAM DESIGN",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 8-9:50a",
+        "instructor": "S. Jaime",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 399",
+        "title": "SPECIAL TOPICS: ST/ TECH IN KINESIOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "D. Phillips",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "KIN 425",
+        "title": "ANATOMICAL KINESIOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8:30-9:50a",
+        "instructor": "D. Phillips",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "KIN 434",
+        "title": "APPLIED MUSCLE PHYSIOLOGY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2:30-3:50p",
+        "instructor": "S. Jaime",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "KIN 437",
+        "title": "PHYSICAL ACTIVITY, AGING, AND CHRONIC DISEASE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "S. Jaime",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "KIN 474",
+        "title": "EXERCISE PHYSIOLOGY LAB METHODS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 1-1:50p",
+        "instructor": "S. Jaime",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "KIN 481",
+        "title": "^ANALYSIS OF CRITICAL ISSUES IN KINESIOLOGY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "502",
+        "meeting_pattern": "MW 12:30-1:50p",
+        "instructor": "J. Coughlin",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MATS 321",
+        "title": "INTRODUCTION TO MATERIALS SCIENCE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "C. Lanaud",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MB 302",
+        "title": "GENERAL MICROBIOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "P. Ball",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MB 303",
+        "title": "GENERAL MICROBIOLOGY LABORATORY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "510",
+        "meeting_pattern": "TR 1:30-3:20p",
+        "instructor": "P. Ball",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MB 330",
+        "title": "*DISEASE AND SOCIETY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:20a",
+        "instructor": "P. Ball",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MB 385",
+        "title": "^EMERGING INFECTIOUS DISEASES AND EPIDEMICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:20a",
+        "instructor": "B. Seal",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ME 203",
+        "title": "COMPUTATIONAL METHODS FOR ENGINEERING",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-12:50p",
+        "instructor": "R. Hatton",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ME 217",
+        "title": "MECHANICAL ENGINEERING DYNAMICS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "K. Martin",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ME 310",
+        "title": "INTRODUCTION TO THERMODYNAMICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "R. Webb",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ME 333",
+        "title": "THERMODYNAMICS II",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "C. Lanaud",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MGMT 453",
+        "title": "HUMAN RESOURCES MANAGEMENT",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 10-11:50a",
+        "instructor": "S. Howes",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MRKT 488",
+        "title": "PROFESSIONAL SALES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "T. Laurence",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MTH 103",
+        "title": "ALGEBRAIC REASONING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "A. Banaitis",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "MTH 105Z",
+        "title": "+*MATH IN SOCIETY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "A. Banaitis",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MTH 111Z",
+        "title": "+*PRECALCULUS I: FUNCTIONS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "E. Hagedorn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "MTH 112Z",
+        "title": "+*PRECALCULUS II: TRIGONOMETRY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "A. Banaitis",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MTH 211",
+        "title": "*FOUNDATIONS OF ELEMENTARY MATHEMATICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "E. Hagedorn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "MTH 212",
+        "title": "FOUNDATIONS OF ELEMENTARY MATHEMATICS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "M. Knapp",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MTH 231",
+        "title": "ELEMENTS OF DISCRETE MATHEMATICS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "J. Shaw",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MTH 241",
+        "title": "*CALCULUS FOR MANAGEMENT AND SOCIAL SCIENCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "E. Hagedorn",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MTH 245",
+        "title": "*MATHEMATICS FOR MANAGEMENT, LIFE, AND SOCIAL SCIENCES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "E. Hagedorn",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MTH 251",
+        "title": "*DIFFERENTIAL CALCULUS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "A. Banaitis",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "MTH 252",
+        "title": "INTEGRAL CALCULUS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "E. Hagedorn",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MTH 253",
+        "title": "INFINITE SERIES AND SEQUENCES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:50a",
+        "instructor": "E. Hagedorn",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MTH 254",
+        "title": "VECTOR CALCULUS I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "C. Ray",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "MTH 256",
+        "title": "APPLIED DIFFERENTIAL EQUATIONS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "J. Shaw",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "MTH 264",
+        "title": "INTRODUCTION TO MATRIX ALGEBRA",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "J. Shaw",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MTH 341",
+        "title": "LINEAR ALGEBRA I",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "E. Hagedorn",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "MTH 342",
+        "title": "LINEAR ALGEBRA II",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "J. Shaw",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "MTH 390",
+        "title": "FOUNDATIONS OF ELEMENTARY MATHEMATICS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "A. Banaitis",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "NMC 101",
+        "title": "*INTRODUCTION TO NEW MEDIA COMMUNICATIONS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8:30-9:50a",
+        "instructor": "J. Wheeler",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "NMC 351",
+        "title": "NEW MEDIA VISUALIZATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "K. Fletcher",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "NMC 484",
+        "title": "NEW MEDIA ANIMATION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "K. Fletcher",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "NR 201",
+        "title": "MANAGING NATURAL RESOURCES FOR THE FUTURE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12:30-1:50p",
+        "instructor": "S. Herzog",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "NR 202",
+        "title": "NATURAL RESOURCE PROBLEMS AND SOLUTIONS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8:30-9:50a",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "NR 455",
+        "title": "NATURAL RESOURCE DECISION MAKING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "S. Herzog",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "NUTR 225",
+        "title": "GENERAL HUMAN NUTRITION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 1-1:50p",
+        "instructor": "D. Montoya",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "NUTR 240",
+        "title": "HUMAN NUTRITION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-12:50p",
+        "instructor": "D. Montoya",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "OP 101",
+        "title": "INTRODUCTION TO THE OUTDOOR PRODUCTS INDUSTRY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "N. Morrison",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "OP 231",
+        "title": "EXPERIENCE OUTDOOR PRODUCTS - WATER",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 4-5:50p",
+        "instructor": "M. Rogers",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "OP 232",
+        "title": "EXPERIENCE OUTDOOR PRODUCTS - WINTER",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "M. Rogers",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "OP 233",
+        "title": "EXPERIENCE OUTDOOR PRODUCTS - LAND",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "M. Rogers",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "OP 301",
+        "title": "OUTDOOR PRODUCTS PROCESS CONNECTIONS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "M. Rogers",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "OP 307",
+        "title": "OUTDOOR PRODUCTS PRE-INTERNSHIP SEMINAR",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "OP 351",
+        "title": "OUTDOOR PRODUCTS DESIGN AND DEVELOPMENT I",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "N. Morrison",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "OP 352",
+        "title": "OUTDOOR PRODUCTS DESIGN AND DEVELOPMENT II",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "N. Morrison",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "OP 353",
+        "title": "OUTDOOR PRODUCTS FAILURE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "N. Morrison",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "OP 360",
+        "title": "OUTDOOR PRODUCTS BRANDING, MERCHANDISING AND SALES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "N. Seeley",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "OP 406",
+        "title": "PROJECTS: PROJECTS/DESIGN FOUNDATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "MTWRF 9a-3:50p",
+        "instructor": "N. Morrison",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "OP 406",
+        "title": "PROJECTS: PROJECTS/SNOPLANKS ACADEMY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PAC 173",
+        "title": "INTERMEDIATE ROCK CLIMBING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PH 201",
+        "title": "*GENERAL PHYSICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "R. Scheirer",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PH 202",
+        "title": "*GENERAL PHYSICS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "R. Scheirer",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PH 203",
+        "title": "*GENERAL PHYSICS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "R. Scheirer",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PH 211",
+        "title": "*GENERAL PHYSICS WITH CALCULUS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:20p",
+        "instructor": "R. Scheirer",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PH 212",
+        "title": "*GENERAL PHYSICS WITH CALCULUS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "R. Scheirer",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PH 213",
+        "title": "*GENERAL PHYSICS WITH CALCULUS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "R. Scheirer",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PS 201",
+        "title": "*INTRODUCTION TO UNITED STATES GOVERNMENT AND POLITICS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "J. Stiegler",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PS 205",
+        "title": "*INTRODUCTION TO INTERNATIONAL RELATIONS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "K. Hunter",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PS 206",
+        "title": "+*INTRODUCTION TO POLITICAL THOUGHT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "A. Mendez",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PS 354",
+        "title": "*INTERNATIONAL ORGANIZATIONS AND GLOBAL POLITICS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "K. Hunter",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PS 362",
+        "title": "MODERN POLITICAL THOUGHT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "A. Mendez",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PS 383",
+        "title": "*CONSTITUTIONAL LAW: CIVIL RIGHTS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "A. Mendez",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PS 475",
+        "title": "ENVIRONMENTAL POLITICS AND POLICY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 4-5:50p",
+        "instructor": "R. Hartwell",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PSY 201Z",
+        "title": "+*INTRODUCTION TO PSYCHOLOGY I",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "L. Shank",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PSY 202HZ",
+        "title": "+*INTRODUCTION TO PSYCHOLOGY II",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "C. Wolsko",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 202Z",
+        "title": "+*INTRODUCTION TO PSYCHOLOGY II",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "C. Wolsko",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 211",
+        "title": "CAREERS IN PSYCHOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 10-11:50a",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PSY 297",
+        "title": "THINKING LIKE A PSYCHOLOGICAL SCIENTIST",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 298",
+        "title": "QUANTITATIVE METHODS IN PSYCHOLOGICAL SCIENCE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "C. Wolsko",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PSY 301",
+        "title": "^RESEARCH METHODS IN PSYCHOLOGICAL SCIENCE",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "S. Harsey",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PSY 311",
+        "title": "TRANSFER TRANSITIONS: CAREERS IN PSYCHOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 10-11:50a",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PSY 330",
+        "title": "BRAIN AND BEHAVIOR",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PSY 350",
+        "title": "HUMAN LIFESPAN DEVELOPMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "M. Bartini",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 360",
+        "title": "SOCIAL PSYCHOLOGY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "S. Harsey",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PSY 370",
+        "title": "PERSONALITY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PSY 381",
+        "title": "ABNORMAL PSYCHOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 410",
+        "title": "PSYCHOLOGY INTERNSHIP",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 411",
+        "title": "PSYCHOLOGY CAPSTONE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 426",
+        "title": "*PSYCHOLOGY OF GENDER",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "S. Harsey",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "PSY 482",
+        "title": "PSYCHOTHERAPY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "Staff",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PSY 488",
+        "title": "PSYCHOLOGY OF TRAUMA, OPPRESSION, AND RESILIENCE",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "S. Harsey",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "PSY 498",
+        "title": "HEALTH PSYCHOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "D. Becht-Buss",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "PSY 499",
+        "title": "SPECIAL TOPICS: ST/ PSYCHOLOGY OF RELIGION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "502",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "C. Wolsko",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "RNG 341",
+        "title": "PRINCIPLES OF RANGELAND ECOLOGY AND MANAGEMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "M. Shinderman",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "RNG 353",
+        "title": "WILDLAND PLANT IDENTIFICATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 9-11:50a; F 12-2:50p",
+        "instructor": "S. Ganzhorn",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "RNG 455",
+        "title": "RIPARIAN ECOHYDROLOGY AND MANAGEMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "S. Herzog",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "SE 467",
+        "title": "BUSINESS OF SOFTWARE II",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "T 2-3:50p",
+        "instructor": "J. Rosenzweig",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "SOC 204",
+        "title": "*INTRODUCTION TO SOCIOLOGY",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "J. Porter",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "SOC 206",
+        "title": "*SOCIAL PROBLEMS AND ISSUES",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "J. Porter",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "SOC 430",
+        "title": "GENDER AND SOCIETY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "R. Bemrose",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "SOC 480",
+        "title": "*ENVIRONMENTAL SOCIOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:50p",
+        "instructor": "R. Bemrose",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "SPAN 111",
+        "title": "FIRST-YEAR SPANISH",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "D. Engel",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "SPAN 112",
+        "title": "FIRST-YEAR SPANISH",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "D. Engel",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "SPAN 113",
+        "title": "FIRST-YEAR SPANISH",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "D. Engel",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "SPAN 211",
+        "title": "SECOND-YEAR SPANISH",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "D. Engel",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "SPAN 212",
+        "title": "SECOND-YEAR SPANISH",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "D. Engel",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "SPAN 213",
+        "title": "SECOND-YEAR SPANISH",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "D. Engel",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "SSCI 211",
+        "title": "CAREER DEVELOPMENT IN THE SOCIAL SCIENCES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "F 12-1:50p",
+        "instructor": "N. Dahl",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "SSCI 301",
+        "title": "^QUALITATIVE RESEARCH METHODS FOR THE SOCIAL SCIENCES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 4-5:50p",
+        "instructor": "E. Marino",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "ST 202",
+        "title": "PRINCIPLES OF STATISTICS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "P. Baldivieso",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ST 243Z",
+        "title": "ELEMENTARY STATISTICS I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "J. Shaw",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ST 314",
+        "title": "INTRODUCTION TO STATISTICS FOR ENGINEERS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "P. Baldivieso",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "ST 351",
+        "title": "INTRODUCTION TO STATISTICAL METHODS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "510",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "P. Baldivieso",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "ST 352",
+        "title": "INTRODUCTION TO STATISTICAL METHODS",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "P. Baldivieso",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "SUS 102",
+        "title": "*INTRODUCTION TO ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "A. Lay Cranston",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "SUS 304",
+        "title": "*SUSTAINABILITY ASSESSMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "M. Shinderman",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "SUS 350",
+        "title": "*SUSTAINABLE COMMUNITIES",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "M. Shinderman",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 115",
+        "title": "OUTDOOR LIVING SKILLS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "M 10-11:50a",
+        "instructor": "T. Chapmon",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "TRAL 118",
+        "title": "LABORATORY FOR OUTDOOR LIVING SKILLS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "FSU 8a-7:50p",
+        "instructor": "T. Chapmon",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "TRAL 132",
+        "title": "FOUNDATIONS OF OUTDOOR AND ADVENTURE PROFESSIONS",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8:30-9:50a",
+        "instructor": "A. Hawley",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 173",
+        "title": "INTERMEDIATE ROCK CLIMBING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 215",
+        "title": "GROUP FACILITATION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:50p",
+        "instructor": "J. Conrad",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "TRAL 218",
+        "title": "ROCK SITE MANAGEMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "F 8a-3:50p",
+        "instructor": "T. Chapmon",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 222",
+        "title": "WILDERNESS FIRST RESPONDER",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-11:50a",
+        "instructor": "K. Dougherty",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 251",
+        "title": "RECREATION RESOURCE MANAGEMENT",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:50p",
+        "instructor": "T. Chapmon",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "TRAL 270",
+        "title": "PRE-INTERNSHIP SEMINAR",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "",
+        "meeting_pattern": "",
+        "instructor": "",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 280",
+        "title": "OUTDOOR LEADERSHIP FUNDAMENTALS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MTWRFSU 8a-8p; MTWRF 8-11:50a",
+        "instructor": "A. Hawley",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "TRAL 330",
+        "title": "AVALANCHE SKILLS AND RECREATION LEVEL 1 TRAINING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "R 4-5:50p; S 8a-3:50p",
+        "instructor": "B. Martin",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "TRAL 353",
+        "title": "NATURE, ECO, AND ADVENTURE TOURISM",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "K. Lindberg",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 357",
+        "title": "*PARKS AND PROTECTED AREAS MANAGEMENT",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-5:50p",
+        "instructor": "K. Lindberg",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 370",
+        "title": "DESIGN AND MANAGEMENT OF OUTDOOR EXPERIENCES",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "A. Hawley",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "TRAL 374",
+        "title": "OUTDOOR ADVENTURE EDUCATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8:30-9:50a",
+        "instructor": "A. Hawley",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 375",
+        "title": "^EXPERIENTIAL EDUCATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:50a",
+        "instructor": "T. Chapmon",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "TRAL 377",
+        "title": "RIVER EXPEDITION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MTWRFSU 8a-8p; MTWRF 8-11:50a",
+        "instructor": "J. Conrad",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "TRAL 379",
+        "title": "MOUNTAIN EXPEDITION",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "MTWRFSU 8a-8p; WR 8-11:30a; FS 8-11:50a",
+        "instructor": "T. Chapmon",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "TRAL 476",
+        "title": "RISK MANAGEMENT IN TOURISM, RECREATION, AND ADVENTURE LEADERSHIP",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 2-3:20p",
+        "instructor": "A. Hawley",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "TRAL 479",
+        "title": "*NATURE AND THE HUMAN EXPERIENCE",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 8-9:20a",
+        "instructor": "T. Chapmon",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "UEXP 399",
+        "title": "SPECIAL TOPICS: ST/ TRIO INCOMING STUDENTS CSC",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "502",
+        "meeting_pattern": "W 4-5:50p",
+        "instructor": "A. Davila-Klautzsch",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "UEXP 399",
+        "title": "SPECIAL TOPICS: ST/TRIO-SSS BUILD CAREER FNDN",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "W 4-5:20p",
+        "instructor": "A. Davila-Klautzsch",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "WR 121HZ",
+        "title": "+*COMPOSITION I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "C. Snyder",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "WR 121Z",
+        "title": "+*COMPOSITION I",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 10-11:50a",
+        "instructor": "C. Snyder",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "WR 214",
+        "title": "*WRITING IN BUSINESS",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 2-3:20p",
+        "instructor": "M. Cooper",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "WR 224",
+        "title": "*INTRODUCTION TO FICTION WRITING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:20p",
+        "instructor": "C. Snyder",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "WR 227Z",
+        "title": "*TECHNICAL WRITING",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 4-5:50p",
+        "instructor": "M. Cooper",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "WR 227Z",
+        "title": "+*TECHNICAL WRITING",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:50p",
+        "instructor": "M. Gomez",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "WR 323",
+        "title": "*ADVANCED WRITING & ARGUMENTATION",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 10-11:20a",
+        "instructor": "M. Cooper",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "Z 349",
+        "title": "*BIODIVERSITY: CAUSES, CONSEQUENCES, AND CONSERVATION",
+        "terms_offered": [
+            "Winter"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 12-1:20p",
+        "instructor": "K. Smith",
+        "source_term": "202502"
+    },
+    {
+        "course_code": "Z 371",
+        "title": "VERTEBRATE BIOLOGY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:20a",
+        "instructor": "B. Tanis",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "Z 372",
+        "title": "VERTEBRATE BIOLOGY LABORATORY",
+        "terms_offered": [
+            "Spring"
+        ],
+        "section": "510",
+        "meeting_pattern": "TR 11a-12:50p",
+        "instructor": "B. Tanis",
+        "source_term": "202503"
+    },
+    {
+        "course_code": "Z 423",
+        "title": "ENVIRONMENTAL PHYSIOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "MW 12-1:20p",
+        "instructor": "B. Tanis",
+        "source_term": "202501"
+    },
+    {
+        "course_code": "Z 477",
+        "title": "AQUATIC ENTOMOLOGY",
+        "terms_offered": [
+            "Fall"
+        ],
+        "section": "501",
+        "meeting_pattern": "TR 8-9:50a",
+        "instructor": "M. Orr",
+        "source_term": "202501"
+    }
+]
