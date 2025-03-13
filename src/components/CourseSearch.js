@@ -10,7 +10,8 @@ const CourseSearch = () => {
     plannedCourses,
     markCourseCompleted,
     addCourseToPlan,
-    arePrerequisitesMet
+    arePrerequisitesMet,
+    termOfferings
   } = usePlannerContext();
   
   // State for search and filters
@@ -53,35 +54,76 @@ const CourseSearch = () => {
     "Fall 2026"
   ];
   
-  // Filter courses based on search and filters
+  // MANUAL FIX: Special handling for courses with multiple terms
+  const getTermsForCourse = (courseCode) => {
+    // Courses with multiple terms
+    const multiTermCourses = {
+      'PSY 202Z': ['Fall', 'Spring'],
+      'PSY 401': ['Fall', 'Winter', 'Spring'],
+      'PSY 410': ['Fall', 'Winter', 'Spring'],
+      'HDFS 201': ['Fall', 'Spring'],
+      'HDFS 262': ['Winter', 'Spring'],
+      'HDFS 310': ['Fall', 'Winter', 'Spring'],
+      'HDFS 401': ['Fall', 'Winter', 'Spring'],
+      'HDFS 405': ['Fall', 'Winter', 'Spring'],
+      'HDFS 406': ['Fall', 'Winter', 'Spring'],
+      'HDFS 447': ['Fall', 'Winter', 'Spring'],
+      'HDFS 469': ['Fall', 'Winter', 'Spring']
+    };
+    
+    // If it's a special course, use our manual list
+    if (multiTermCourses[courseCode]) {
+      return multiTermCourses[courseCode];
+    }
+    
+    // Find the course in our courses array
+    const course = courses.find(c => c.course_code === courseCode);
+    if (!course) return [];
+    
+    // Otherwise use the data from the course object
+    return Array.isArray(course.terms_offered) ? course.terms_offered : 
+           (course.terms_offered ? [course.terms_offered] : []);
+  };
+  
+  // Filter courses based on search, category, and term
   useEffect(() => {
-    const filtered = courses.filter(course => {
-      // Filter by search term
-      if (searchTerm && !course.course_code.toLowerCase().includes(searchTerm.toLowerCase()) && 
-          !course.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-        return false;
-      }
-      
-      // Filter by category
-      if (categoryFilter !== 'All Categories') {
-        const matchesMainCategory = course.category === categoryFilter;
-        const matchesRequirementCategory = course.requirement_categories && 
-          course.requirement_categories.includes(categoryFilter);
+    let filtered = courses;
+    
+    // Filter by search term
+    if (searchTerm) {
+      const search = searchTerm.toLowerCase();
+      filtered = filtered.filter(course => 
+        course.course_code.toLowerCase().includes(search) || 
+        course.title.toLowerCase().includes(search) ||
+        (course.description && course.description.toLowerCase().includes(search))
+      );
+    }
+    
+    // Filter by category
+    if (categoryFilter !== 'All Categories') {
+      filtered = filtered.filter(course => {
+        // Check main category
+        if (course.category === categoryFilter) {
+          return true;
+        }
         
-        if (!matchesMainCategory && !matchesRequirementCategory) {
-          return false;
+        // Check requirement categories
+        if (course.requirement_categories && course.requirement_categories.includes(categoryFilter)) {
+          return true;
         }
-      }
-      
-      // Filter by term
-      if (termFilter !== 'All Terms') {
-        if (!course.terms_offered || !course.terms_offered.includes(termFilter)) {
-          return false;
-        }
-      }
-      
-      return true;
-    });
+        
+        return false;
+      });
+    }
+    
+    // Filter by term
+    if (termFilter !== 'All Terms') {
+      filtered = filtered.filter(course => {
+        // Use our special function to get terms for this course
+        const courseTerms = getTermsForCourse(course.course_code);
+        return courseTerms.includes(termFilter);
+      });
+    }
     
     setFilteredCourses(filtered);
   }, [searchTerm, categoryFilter, termFilter, courses]);
@@ -111,29 +153,26 @@ const CourseSearch = () => {
   };
   
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-primary mb-6">Course Search</h1>
+    <div className="mt-8 animate-fadeIn">
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6">Course Search</h2>
       
-      <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+      <div className="bg-white rounded-lg shadow-md p-6">
+        {/* Search and filters */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div>
-            <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-1">
-              Search Courses
-            </label>
+            <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-1">Search</label>
             <input
               type="text"
               id="search"
+              placeholder="Search by course code or title..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search by course code or title..."
               className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
             />
           </div>
           
           <div>
-            <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
-              Filter by Category
-            </label>
+            <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">Category</label>
             <select
               id="category"
               value={categoryFilter}
@@ -141,17 +180,13 @@ const CourseSearch = () => {
               className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               {categories.map(category => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
+                <option key={category} value={category}>{category}</option>
               ))}
             </select>
           </div>
           
           <div>
-            <label htmlFor="term" className="block text-sm font-medium text-gray-700 mb-1">
-              Filter by Term
-            </label>
+            <label htmlFor="term" className="block text-sm font-medium text-gray-700 mb-1">Term Offered</label>
             <select
               id="term"
               value={termFilter}
@@ -159,26 +194,50 @@ const CourseSearch = () => {
               className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               {terms.map(term => (
-                <option key={term} value={term}>
-                  {term}
-                </option>
+                <option key={term} value={term}>{term}</option>
               ))}
             </select>
           </div>
         </div>
         
-        <div className="text-sm text-gray-600 mb-2">
-          Found {filteredCourses.length} courses
+        {/* Planning term selection */}
+        <div className="mb-6">
+          <label htmlFor="planningTerm" className="block text-sm font-medium text-gray-700 mb-1">
+            Add courses to term:
+          </label>
+          <select
+            id="planningTerm"
+            value={selectedTerm}
+            onChange={(e) => setSelectedTerm(e.target.value)}
+            className="p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+          >
+            {futurePlannableTerms.map(term => (
+              <option key={term} value={term}>{term}</option>
+            ))}
+          </select>
         </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredCourses.map(course => (
-          <CourseCard 
-            key={course.course_code} 
-            course={course} 
-          />
-        ))}
+        
+        {/* Results count */}
+        <div className="mb-4 text-sm text-gray-600">
+          Found {filteredCourses.length} {filteredCourses.length === 1 ? 'course' : 'courses'}
+        </div>
+        
+        {/* Course list */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {filteredCourses.map(course => (
+            <CourseCard 
+              key={course.course_code} 
+              course={course} 
+              selectedTerm={selectedTerm}
+            />
+          ))}
+        </div>
+        
+        {filteredCourses.length === 0 && (
+          <div className="text-center py-8">
+            <p className="text-gray-500">No courses match your search criteria.</p>
+          </div>
+        )}
       </div>
     </div>
   );

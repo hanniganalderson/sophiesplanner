@@ -58,7 +58,9 @@ export const PlannerProvider = ({ children }) => {
         credits: course.credits || 0,
         description: course.description || '',
         prerequisites: course.prerequisites || [],
-        terms_offered: course.terms_offered || [],
+        // Ensure terms_offered is always an array, even if it's a single string in the data
+        terms_offered: Array.isArray(course.terms_offered) ? course.terms_offered : 
+                      (course.terms_offered ? [course.terms_offered] : []),
         category: course.category || '',
         requirement_categories: course.requirement_categories || []
       }));

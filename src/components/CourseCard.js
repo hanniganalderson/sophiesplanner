@@ -102,6 +102,36 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
   
   const missingPrereqs = getMissingPrerequisites();
   
+  // MANUAL FIX: Special handling for courses with multiple terms
+  const getTermsForCourse = (courseCode) => {
+    // Courses with multiple terms
+    const multiTermCourses = {
+      'PSY 202Z': ['Fall', 'Spring'],
+      'PSY 401': ['Fall', 'Winter', 'Spring'],
+      'PSY 410': ['Fall', 'Winter', 'Spring'],
+      'HDFS 201': ['Fall', 'Spring'],
+      'HDFS 262': ['Winter', 'Spring'],
+      'HDFS 310': ['Fall', 'Winter', 'Spring'],
+      'HDFS 401': ['Fall', 'Winter', 'Spring'],
+      'HDFS 405': ['Fall', 'Winter', 'Spring'],
+      'HDFS 406': ['Fall', 'Winter', 'Spring'],
+      'HDFS 447': ['Fall', 'Winter', 'Spring'],
+      'HDFS 469': ['Fall', 'Winter', 'Spring']
+    };
+    
+    // If it's a special course, use our manual list
+    if (multiTermCourses[courseCode]) {
+      return multiTermCourses[courseCode];
+    }
+    
+    // Otherwise use the data from the course object
+    return Array.isArray(course.terms_offered) ? course.terms_offered : 
+           (course.terms_offered ? [course.terms_offered] : []);
+  };
+  
+  // Get terms for this course
+  const termsList = getTermsForCourse(course.course_code);
+  
   return (
     <div className="bg-white rounded-lg shadow-md p-4 border-t-4 border-primary hover:shadow-lg transition-all duration-300">
       <div className="flex justify-between items-start">
@@ -132,10 +162,10 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
           </p>
         )}
         
-        {/* Display all terms offered */}
-        {course.terms_offered && course.terms_offered.length > 0 && (
+        {/* Display all terms with our manual fix */}
+        {termsList.length > 0 && (
           <p className="mt-1">
-            <span className="font-medium">Available:</span> {course.terms_offered.join(', ')}
+            <span className="font-medium">Available:</span> {termsList.join(', ')}
           </p>
         )}
         
@@ -156,78 +186,61 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
       </div>
       
       {showDetails && (
-        <div className="mt-4 text-sm text-gray-600 border-t pt-4">
-          {course.description && (
-            <div className="mb-3">
-              <h5 className="font-medium text-gray-700 mb-1">Description</h5>
-              <p>{course.description}</p>
-            </div>
-          )}
+        <div className="mt-4 text-sm border-t pt-4">
+          <p className="mb-2">
+            <span className="font-medium">Description:</span> {course.description || 'No description available.'}
+          </p>
           
-          <div className="mb-3">
-            <h5 className="font-medium text-gray-700 mb-1">Prerequisites</h5>
-            <p>{formatPrerequisites(course.prerequisites)}</p>
-            
-            {missingPrereqs.length > 0 && !isCompleted && (
-              <div className="mt-2 text-xs text-red-600">
-                <p className="font-medium">Missing prerequisites:</p>
-                <ul className="list-disc list-inside">
-                  {missingPrereqs.map((prereq, i) => (
-                    <li key={i}>{prereq}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+          <p className="mb-2">
+            <span className="font-medium">Prerequisites:</span> {formatPrerequisites(course.prerequisites)}
+          </p>
           
-          {course.requirement_categories && course.requirement_categories.length > 0 && (
-            <div className="mb-3">
-              <h5 className="font-medium text-gray-700 mb-1">Fulfills Requirements</h5>
-              <ul className="list-disc list-inside">
-                {course.requirement_categories.map((category, i) => (
-                  <li key={i}>{category}</li>
+          {missingPrereqs.length > 0 && (
+            <div className="mt-2 p-2 bg-red-50 rounded-md">
+              <p className="text-red-700 font-medium">Missing Prerequisites:</p>
+              <ul className="list-disc pl-5 text-red-600">
+                {missingPrereqs.map((prereq, index) => (
+                  <li key={index}>{prereq}</li>
                 ))}
               </ul>
             </div>
           )}
-        </div>
-      )}
-      
-      {showActions && (
-        <div className="mt-4 flex flex-wrap gap-2 items-center">
-          {!isCompleted && !isPlanned && selectedTerm && (
+          
+          <div className="mt-4 flex flex-wrap gap-2 items-center">
+            {!isCompleted && !isPlanned && selectedTerm && (
+              <button
+                onClick={handleAddToPlan}
+                disabled={!prereqsMet}
+                className={`text-xs px-2 py-1 rounded ${
+                  !prereqsMet
+                    ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                    : 'bg-primary text-white hover:bg-primary-dark'
+                }`}
+              >
+                Add to {selectedTerm}
+              </button>
+            )}
+            
+            {isPlanned && !isCompleted && (
+              <button
+                onClick={handleRemoveFromPlan}
+                className="text-xs px-2 py-1 rounded bg-red-100 text-red-700 hover:bg-red-200"
+              >
+                Remove from Plan
+              </button>
+            )}
+            
             <button
-              onClick={handleAddToPlan}
-              disabled={!prereqsMet}
+              onClick={handleMarkCompleted}
               className={`text-xs px-2 py-1 rounded ${
-                !prereqsMet
-                  ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                  : 'bg-primary text-white hover:bg-primary-dark'
+                isCompleted
+                  ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
+                  : 'bg-green-100 text-green-700 hover:bg-green-200'
               }`}
             >
-              Add to {selectedTerm}
+              {isCompleted ? 'Mark Incomplete' : 'Mark Complete'}
             </button>
-          )}
-          
-          {isPlanned && !isCompleted && (
-            <button
-              onClick={handleRemoveFromPlan}
-              className="text-xs px-2 py-1 rounded bg-red-100 text-red-700 hover:bg-red-200"
-            >
-              Remove from Plan
-            </button>
-          )}
-          
-          <button
-            onClick={handleMarkCompleted}
-            className={`text-xs px-2 py-1 rounded ${
-              isCompleted
-                ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
-                : 'bg-green-100 text-green-700 hover:bg-green-200'
-            }`}
-          >
-            {isCompleted ? 'Mark Incomplete' : 'Mark Complete'}
-          </button>
+          </div>
         </div>
       )}
     </div>
