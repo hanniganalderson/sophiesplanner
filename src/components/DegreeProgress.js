@@ -1,7 +1,7 @@
 // src/components/DegreeProgress.js
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { usePlannerContext } from '../context/PlannerContext';
-import RequirementTracker from './RequirementTracker';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const DegreeProgress = () => {
   const { 
@@ -12,117 +12,119 @@ const DegreeProgress = () => {
     courses
   } = usePlannerContext();
   
-  const [selectedDegree, setSelectedDegree] = useState('psychology_bs');
-  
-  const degreeData = degreeRequirements[selectedDegree];
-  
-  // Calculate overall progress
+  // Calculate degree progress
   const progress = useMemo(() => {
     const totalCredits = 180; // Fixed total credits
     const completedCreditsTotal = calculateCredits(completedCourses);
     
-    // Calculate credits from planned courses
-    const plannedCreditsTotal = Object.values(plannedCourses)
-      .flat()
-      .filter(code => !completedCourses.includes(code)) // Avoid double-counting
-      .reduce((total, code) => {
-        const course = courses.find(c => c.course_code === code);
-        return total + (course ? parseInt(course.credits) : 0);
-      }, 0);
+    // Calculate planned credits (excluding completed courses)
+    let plannedCreditsTotal = 0;
+    Object.values(plannedCourses).forEach(termCourses => {
+      termCourses.forEach(courseCode => {
+        if (!completedCourses.includes(courseCode)) {
+          plannedCreditsTotal += calculateCredits([courseCode]);
+        }
+      });
+    });
     
-    const totalCompletedAndPlanned = completedCreditsTotal + plannedCreditsTotal;
-    const percentage = Math.min(100, Math.round((completedCreditsTotal / totalCredits) * 100));
-    const projectedPercentage = Math.min(100, Math.round((totalCompletedAndPlanned / totalCredits) * 100));
+    const remainingCredits = totalCredits - completedCreditsTotal - plannedCreditsTotal;
     
     return {
-      completedCredits: completedCreditsTotal,
-      plannedCredits: plannedCreditsTotal,
-      totalCredits,
-      percentage,
-      projectedPercentage,
-      totalCompletedAndPlanned,
-      remainingCredits: totalCredits - completedCreditsTotal - plannedCreditsTotal
+      total: totalCredits,
+      completed: completedCreditsTotal,
+      planned: plannedCreditsTotal,
+      remaining: remainingCredits,
+      completedPercentage: Math.round((completedCreditsTotal / totalCredits) * 100),
+      plannedPercentage: Math.round((plannedCreditsTotal / totalCredits) * 100),
+      remainingPercentage: Math.round((remainingCredits / totalCredits) * 100)
     };
-  }, [degreeData, completedCourses, plannedCourses, calculateCredits, courses]);
+  }, [degreeRequirements, completedCourses, plannedCourses, calculateCredits]);
+  
+  // Data for pie chart
+  const chartData = [
+    { name: 'Completed', value: progress.completed, color: '#7B3FF2' },
+    { name: 'Planned', value: progress.planned, color: '#A67FF8' },
+    { name: 'Remaining', value: progress.remaining, color: '#F5F0FF' }
+  ];
   
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-primary mb-4">Degree Progress</h1>
-      <p className="text-gray-600 mb-6">
-        Track your progress toward your Psychology degree. Current term: <span className="font-medium text-primary">Winter 2025</span>
-      </p>
+    <div className="bg-white rounded-lg shadow-md p-6 animate-fadeIn">
+      <h2 className="text-xl font-semibold text-primary mb-4">Degree Progress</h2>
       
-      {/* Overall Progress */}
-      <div className="bg-white rounded-lg shadow-md p-6 mb-8 border-t-4 border-primary">
-        <h2 className="text-xl font-semibold text-primary mb-4">Overall Progress</h2>
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="w-full md:w-1/2 h-64 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={chartData}
+                cx="50%"
+                cy="50%"
+                innerRadius={60}
+                outerRadius={80}
+                paddingAngle={2}
+                dataKey="value"
+                stroke="#FFFFFF"
+                strokeWidth={2}
+              >
+                {chartData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.color} />
+                ))}
+              </Pie>
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
         
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-          <div>
-            <p className="text-4xl font-bold text-primary">{progress.percentage}%</p>
-            <p className="text-gray-600">Completed ({progress.completedCredits} of 180 credits)</p>
-            
-            {progress.plannedCredits > 0 && (
-              <p className="text-sm text-primary-light mt-1">
-                +{progress.plannedCredits} credits planned
-              </p>
-            )}
-          </div>
-          
-          <div className="mt-4 md:mt-0 w-full md:w-2/3">
-            <div className="h-6 bg-gray-200 rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-primary rounded-full"
-                style={{ width: `${progress.percentage}%` }}
-              ></div>
+        <div className="w-full md:w-1/2 mt-6 md:mt-0 animate-fadeInUp" style={{ animationDelay: '300ms' }}>
+          <div className="grid grid-cols-1 gap-4">
+            <div className="p-3 border rounded-md bg-white shadow-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-700 font-medium">Completed</span>
+                <span className="progress-completed">{progress.completedPercentage}%</span>
+              </div>
+              <div className="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-primary" 
+                  style={{ width: `${progress.completedPercentage}%` }}
+                ></div>
+              </div>
+              <div className="mt-1 text-xs text-right text-gray-600">
+                {progress.completed} / {progress.total} credits
+              </div>
             </div>
             
-            {progress.plannedCredits > 0 && (
-              <div className="flex justify-between mt-1">
-                <span className="text-xs text-gray-500">Current: {progress.percentage}%</span>
-                <span className="text-xs text-primary-light">
-                  Projected: {progress.projectedPercentage}%
-                </span>
+            <div className="p-3 border rounded-md bg-white shadow-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-700 font-medium">Planned</span>
+                <span className="progress-planned">{progress.plannedPercentage}%</span>
               </div>
-            )}
+              <div className="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-primary-light" 
+                  style={{ width: `${progress.plannedPercentage}%` }}
+                ></div>
+              </div>
+              <div className="mt-1 text-xs text-right text-gray-600">
+                {progress.planned} / {progress.total} credits
+              </div>
+            </div>
+            
+            <div className="p-3 border rounded-md bg-white shadow-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-700 font-medium">Remaining</span>
+                <span className="progress-remaining">{progress.remainingPercentage}%</span>
+              </div>
+              <div className="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-gray-300" 
+                  style={{ width: `${progress.remainingPercentage}%` }}
+                ></div>
+              </div>
+              <div className="mt-1 text-xs text-right text-gray-600">
+                {progress.remaining} / {progress.total} credits
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div className="bg-secondary rounded-lg p-3">
-            <p className="text-xl font-semibold text-primary">{progress.completedCredits}</p>
-            <p className="text-sm text-gray-600">Credits Completed</p>
-          </div>
-          
-          <div className="bg-secondary rounded-lg p-3">
-            <p className="text-xl font-semibold text-primary-light">{progress.plannedCredits}</p>
-            <p className="text-sm text-gray-600">Credits Planned</p>
-          </div>
-          
-          <div className="bg-secondary rounded-lg p-3">
-            <p className="text-xl font-semibold text-gray-500">{progress.remainingCredits}</p>
-            <p className="text-sm text-gray-600">Credits Remaining</p>
-          </div>
-          
-          <div className="bg-secondary rounded-lg p-3">
-            <p className="text-xl font-semibold text-primary-dark">180</p>
-            <p className="text-sm text-gray-600">Total Required</p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Requirement Categories */}
-      <h2 className="text-xl font-semibold text-primary mb-4">Degree Requirements</h2>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {degreeData && degreeData.categories && Object.entries(degreeData.categories).map(([key, category]) => (
-          <RequirementTracker
-            key={key}
-            category={category}
-            completedCourses={completedCourses}
-            plannedCourses={plannedCourses}
-            courses={courses}
-          />
-        ))}
       </div>
     </div>
   );
