@@ -23,8 +23,9 @@ const TermPlanner = () => {
     setAnimateTerms(true);
   }, []);
   
-  // Only show terms from Winter 2025 onwards
+  // Only show terms from Fall 2024 onwards
   const terms = [
+    "Fall 2024",
     "Winter 2025",
     "Spring 2025",
     "Fall 2025",

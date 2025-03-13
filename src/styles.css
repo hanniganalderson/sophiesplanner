@@ -6,12 +6,12 @@
 
 /* Base Variables */
 :root {
-  /* Purple & White Theme - Refined */
-  --primary: #7B3FF2;      /* Slightly darker purple for better contrast */
-  --primary-light: #A67FF8;
-  --primary-dark: #5E2BC5;
-  --secondary: #F5F0FF;    /* Lighter purple background */
-  --accent: #FF6B6B;       /* Brighter accent for better visibility */
+  /* Purple & White Theme - Refined and More Readable */
+  --primary: #6B30D9;      /* Slightly darker purple for better contrast */
+  --primary-light: #9B6EF3;
+  --primary-dark: #5425B3;
+  --secondary: #F8F5FF;    /* Lighter purple background for better readability */
+  --accent: #FF5A5A;       /* Brighter accent for better visibility */
   
   /* Neutrals */
   --neutral-50: #FAFAFA;
@@ -36,16 +36,16 @@
   --bg-card: #FFFFFF;
   --bg-sidebar: #FFFFFF;
   
-  /* Text Colors */
-  --text-primary: #424242;
-  --text-secondary: #616161;
-  --text-tertiary: #9E9E9E;
+  /* Text Colors - Improved for readability */
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-tertiary: #777777;
   --text-on-primary: #FFFFFF;
-  --text-on-secondary: #7B3FF2;
+  --text-on-secondary: #6B30D9;
   
-  /* Border Colors */
-  --border-light: #EEEEEE;
-  --border-medium: #E0E0E0;
+  /* Border Colors - Add more contrast to UI elements */
+  --border-light: #E5E5E5;
+  --border-medium: #D0D0D0;
   
   /* Spacing */
   --space-1: 0.25rem;
@@ -781,4 +781,70 @@ a:hover {
   50% {
     opacity: 0.5;
   }
+}
+
+/* Enhance card styles for better readability */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve text contrast */
+.text-gray-600 {
+  color: #555555; /* Darker than default for better readability */
+}
+
+.text-gray-500 {
+  color: #666666; /* Darker than default for better readability */
+}
+
+/* Add these styles to fix dropdown menus */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  background-color: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  clear: both;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* Improve select elements */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B30D9'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.25em 1.25em;
+  padding-right: 2rem !important;
 }

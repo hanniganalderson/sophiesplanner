@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usePlannerContext } from '../context/PlannerContext';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import Notes from './Notes';
 
 const Dashboard = () => {
   const { 
@@ -58,18 +59,60 @@ const Dashboard = () => {
     }).filter(Boolean);
   }, [plannedCourses, courses]);
   
+  // Psychology quotes rotation
+  const psychologyQuotes = [
+    {
+      quote: "Perhaps when we find ourselves wanting everything, it is because we are dangerously close to wanting nothing.",
+      author: "Sylvia Plath",
+      fact: "Sylvia Plath's novel 'The Bell Jar' is considered a seminal work on mental illness."
+    },
+    {
+      quote: "The good life is a process, not a state of being. It is a direction, not a destination.",
+      author: "Carl Rogers",
+      fact: "Carl Rogers developed person-centered therapy, focusing on the client's capacity for self-direction."
+    },
+    {
+      quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+      author: "Aristotle",
+      fact: "Aristotle's work on the psyche laid foundations for modern psychological concepts."
+    },
+    {
+      quote: "The mind is not a vessel to be filled, but a fire to be kindled.",
+      author: "Plutarch",
+      fact: "Ancient Greek philosophers like Plutarch were early contributors to psychological thought."
+    },
+    {
+      quote: "Between stimulus and response there is a space. In that space is our power to choose our response.",
+      author: "Viktor Frankl",
+      fact: "Viktor Frankl developed logotherapy after surviving Nazi concentration camps."
+    }
+  ];
+  
+  // Select a random quote on component mount
+  const [currentQuote, setCurrentQuote] = useState(0);
+  
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * psychologyQuotes.length);
+    setCurrentQuote(randomIndex);
+  }, []);
+  
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-primary mb-8 transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn">
         Welcome to Your Psychology Degree Planner
       </h1>
       
-      {/* Sylvia Plath Quote */}
+      {/* Psychology Quote */}
       <div className="bg-secondary p-6 rounded-lg mb-8 border-l-4 border-primary transition-all duration-300 hover:shadow-lg animate-fadeIn" style={{ animationDelay: '100ms' }}>
         <p className="text-gray-700 italic">
-          "Perhaps when we find ourselves wanting everything, it is because we are dangerously close to wanting nothing."
+          "{psychologyQuotes[currentQuote].quote}"
         </p>
-        <p className="text-right text-sm text-primary mt-2">— Sylvia Plath</p>
+        <p className="text-right text-sm text-primary mt-2">— {psychologyQuotes[currentQuote].author}</p>
+        <div className="mt-4 pt-3 border-t border-gray-200">
+          <p className="text-xs text-gray-600">
+            <span className="font-medium">Psychology Fact:</span> {psychologyQuotes[currentQuote].fact}
+          </p>
+        </div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -193,6 +236,11 @@ const Dashboard = () => {
             </Link>
           </div>
         )}
+      </div>
+      
+      {/* Notes Section - Add this before the Internships & Extracurriculars section */}
+      <div className="mt-8">
+        <Notes />
       </div>
       
       {/* Internships & Extracurriculars */}

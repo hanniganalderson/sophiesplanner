@@ -1,7 +1,6 @@
 // src/components/CourseCard.js
-import React from 'react';
+import React, { useState } from 'react';
 import { usePlannerContext } from '../context/PlannerContext';
-import { useSpring, animated } from '@react-spring/web';
 
 const CourseCard = ({ course, showActions = true }) => {
   const { 
@@ -13,6 +12,8 @@ const CourseCard = ({ course, showActions = true }) => {
     removeCourseFromPlan,
     arePrerequisitesMet
   } = usePlannerContext();
+  
+  const [showDropdown, setShowDropdown] = useState(false);
   
   const isCompleted = completedCourses.includes(course.course_code);
   
@@ -36,155 +37,156 @@ const CourseCard = ({ course, showActions = true }) => {
   
   // Handle marking course as completed
   const handleMarkCompleted = () => {
-    markCourseCompleted(course.course_code);
+    if (isCompleted) {
+      unmarkCourseCompleted(course.course_code);
+    } else {
+      markCourseCompleted(course.course_code);
+      
+      // If the course was planned, remove it from the plan
+      const plannedTerm = getPlannedTerm();
+      if (plannedTerm) {
+        removeCourseFromPlan(course.course_code, plannedTerm);
+      }
+    }
   };
   
-  // Handle unmarking course as completed
-  const handleUnmarkCompleted = () => {
-    unmarkCourseCompleted(course.course_code);
-  };
-  
-  // Handle adding course to a term
+  // Handle adding course to plan
   const handleAddToPlan = (term) => {
     addCourseToPlan(course.course_code, term);
+    setShowDropdown(false);
   };
   
   // Handle removing course from plan
   const handleRemoveFromPlan = () => {
-    const term = getPlannedTerm();
-    if (term) {
-      removeCourseFromPlan(course.course_code, term);
+    const plannedTerm = getPlannedTerm();
+    if (plannedTerm) {
+      removeCourseFromPlan(course.course_code, plannedTerm);
     }
   };
   
-  // Hover animation
-  const [props, set] = useSpring(() => ({
-    transform: 'scale(1)',
-    boxShadow: '0 4px 6px rgba(123, 63, 242, 0.1)',
-    config: { mass: 1, tension: 350, friction: 40 }
-  }));
-  
   return (
-    <animated.div 
-      style={props}
-      onMouseEnter={() => set({ transform: 'scale(1.02)', boxShadow: '0 10px 15px rgba(123, 63, 242, 0.15)' })}
-      onMouseLeave={() => set({ transform: 'scale(1)', boxShadow: '0 4px 6px rgba(123, 63, 242, 0.1)' })}
-      className={`bg-white rounded-lg p-4 border-l-4 ${
-        isCompleted ? 'border-success' : 
-        isPlanned ? 'border-primary' : 
-        'border-gray-300'
-      }`}
+    <div 
+      className="bg-white rounded-lg p-4 border-l-4 shadow-sm hover:shadow-md transition-all duration-300 animate-fadeIn"
+      style={{ 
+        borderColor: isCompleted ? 'var(--success)' : isPlanned ? 'var(--primary)' : 'var(--border-medium)'
+      }}
     >
-      <div className="butterfly-course-header">
+      <div className="flex justify-between items-start">
         <div>
-          <h3 className="butterfly-course-title">{course.title}</h3>
-          <div className="butterfly-course-code">{course.course_code}</div>
+          <p className="font-mono text-xs text-gray-600">{course.course_code}</p>
+          <h3 className="font-medium text-primary-dark">{course.title}</h3>
+          <p className="text-sm text-gray-700 mt-1">{course.credits} credits</p>
+          
+          {course.prerequisites && course.prerequisites.length > 0 && (
+            <p className="text-xs text-gray-600 mt-2">
+              <span className="font-medium">Prerequisites:</span> {course.prerequisites.join(', ')}
+            </p>
+          )}
+          
+          {course.terms_offered && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {course.terms_offered.map(term => (
+                <span key={term} className="text-xs bg-secondary text-primary-dark px-2 py-0.5 rounded-full">
+                  {term}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
-        <div className="butterfly-course-credits">{course.credits} credits</div>
+        
+        {isCompleted && (
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+            Completed
+          </span>
+        )}
+        
+        {isPlanned && !isCompleted && (
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+            Planned: {getPlannedTerm()}
+          </span>
+        )}
       </div>
-      
-      <div className="butterfly-course-description">
-        {course.description}
-      </div>
-      
-      {course.prerequisites && course.prerequisites.length > 0 && (
-        <div className="text-sm text-gray-600 mb-2">
-          <span className="font-medium">Prerequisites:</span>{' '}
-          {course.prerequisites.join(', ')}
-        </div>
-      )}
-      
-      {course.terms_offered && course.terms_offered.length > 0 && (
-        <div className="butterfly-course-terms mb-3">
-          {course.terms_offered.map(term => (
-            <span key={term} className="butterfly-course-term">
-              {term}
-            </span>
-          ))}
-        </div>
-      )}
       
       {showActions && (
-        <div className="butterfly-course-footer">
-          <div>
-            {isCompleted ? (
-              <span className="butterfly-badge completed">Completed</span>
-            ) : isPlanned ? (
-              <span className="butterfly-badge planned">Planned for {getPlannedTerm()}</span>
-            ) : !prereqsMet ? (
-              <span className="butterfly-badge" style={{backgroundColor: 'var(--warning)', color: 'var(--text-primary)'}}>
-                Prerequisites not met
-              </span>
-            ) : null}
-          </div>
+        <div className="mt-4 pt-3 border-t border-gray-200 flex justify-between items-center">
+          <button
+            onClick={handleMarkCompleted}
+            className={`text-xs px-3 py-1 rounded-md transition-all duration-300 ${
+              isCompleted 
+                ? 'bg-gray-200 text-gray-700 hover:bg-gray-300' 
+                : 'bg-green-100 text-green-800 hover:bg-green-200'
+            }`}
+          >
+            {isCompleted ? 'Unmark Completed' : 'Mark Completed'}
+          </button>
           
-          <div className="butterfly-course-actions">
-            {isCompleted ? (
-              <button 
-                onClick={handleUnmarkCompleted}
-                className="butterfly-btn butterfly-btn-outline text-xs py-1 px-2"
-              >
-                Unmark Completed
-              </button>
-            ) : (
-              <button 
-                onClick={handleMarkCompleted}
-                className="butterfly-btn butterfly-btn-primary text-xs py-1 px-2"
-                disabled={!prereqsMet}
-              >
-                Mark Completed
-              </button>
-            )}
-            
-            {isPlanned ? (
-              <button 
-                onClick={handleRemoveFromPlan}
-                className="butterfly-btn butterfly-btn-outline text-xs py-1 px-2"
-              >
-                Remove from Plan
-              </button>
-            ) : !isCompleted && (
-              <div className="relative inline-block">
-                <button 
-                  className="butterfly-btn butterfly-btn-secondary text-xs py-1 px-2"
-                  disabled={!prereqsMet}
+          {!isCompleted && (
+            <div className="relative dropdown">
+              {isPlanned ? (
+                <button
+                  onClick={handleRemoveFromPlan}
+                  className="text-xs px-3 py-1 rounded-md bg-red-100 text-red-800 hover:bg-red-200 transition-all duration-300"
                 >
-                  Add to Term
+                  Remove from Plan
                 </button>
-                <div className="absolute right-0 mt-1 w-48 bg-white rounded-md shadow-lg z-10 hidden group-hover:block">
-                  <div className="py-1">
-                    <button 
-                      onClick={() => handleAddToPlan('Fall 2024')}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Fall 2024
-                    </button>
-                    <button 
-                      onClick={() => handleAddToPlan('Spring 2025')}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Spring 2025
-                    </button>
-                    <button 
-                      onClick={() => handleAddToPlan('Fall 2025')}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Fall 2025
-                    </button>
-                    <button 
-                      onClick={() => handleAddToPlan('Spring 2026')}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Spring 2026
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+              ) : (
+                <>
+                  <button
+                    onClick={() => setShowDropdown(!showDropdown)}
+                    disabled={!prereqsMet}
+                    className={`text-xs px-3 py-1 rounded-md flex items-center ${
+                      prereqsMet 
+                        ? 'bg-primary text-white hover:bg-primary-dark' 
+                        : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                    } transition-all duration-300`}
+                  >
+                    Add to Plan
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  {showDropdown && (
+                    <div className="dropdown-menu animate-fadeIn">
+                      <button 
+                        onClick={() => handleAddToPlan('Fall 2024')}
+                        className="dropdown-item"
+                      >
+                        Fall 2024
+                      </button>
+                      <button 
+                        onClick={() => handleAddToPlan('Winter 2025')}
+                        className="dropdown-item"
+                      >
+                        Winter 2025
+                      </button>
+                      <button 
+                        onClick={() => handleAddToPlan('Spring 2025')}
+                        className="dropdown-item"
+                      >
+                        Spring 2025
+                      </button>
+                      <button 
+                        onClick={() => handleAddToPlan('Fall 2025')}
+                        className="dropdown-item"
+                      >
+                        Fall 2025
+                      </button>
+                      <button 
+                        onClick={() => handleAddToPlan('Spring 2026')}
+                        className="dropdown-item"
+                      >
+                        Spring 2026
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          )}
         </div>
       )}
-    </animated.div>
+    </div>
   );
 };
 
