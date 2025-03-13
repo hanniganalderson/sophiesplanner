@@ -17,6 +17,9 @@ export const PlannerProvider = ({ children }) => {
   // Store planned courses by term
   const [plannedCourses, setPlannedCourses] = useState({});
 
+  // Store processed courses
+  const [courses, setCourses] = useState([]);
+
   // Store search/filter state
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCategory, setFilterCategory] = useState('All Categories');
@@ -43,6 +46,24 @@ export const PlannerProvider = ({ children }) => {
         throw new Error('Planner data is missing or invalid');
       }
       
+      // Process the courses from the updated JSON structure
+      const allCourses = plannerData.courses || [];
+      
+      // Map courses to the format expected by the application
+      const processedCourses = allCourses.map(course => ({
+        ...course,
+        // Ensure all required fields exist
+        course_code: course.course_code || '',
+        title: course.title || '',
+        credits: course.credits || 0,
+        description: course.description || '',
+        prerequisites: course.prerequisites || [],
+        terms_offered: course.terms_offered || [],
+        category: course.category || '',
+        requirement_categories: course.requirement_categories || []
+      }));
+      
+      setCourses(processedCourses);
       setLoading(false);
     } catch (err) {
       console.error('Error loading planner data:', err);
@@ -144,19 +165,26 @@ export const PlannerProvider = ({ children }) => {
   
   // Check if prerequisites are met - memoized
   const arePrerequisitesMet = useCallback((courseCode) => {
-    const course = plannerData.courses.find(c => c.course_code === courseCode);
+    const course = courses.find(c => c.course_code === courseCode);
     
     if (!course || !course.prerequisites || course.prerequisites.length === 0) {
       return true;
     }
     
-    return course.prerequisites.every(prereq => completedCourses.includes(prereq));
-  }, [completedCourses]);
+    // Handle prerequisites that might be in the format "COURSE1 or COURSE2"
+    return course.prerequisites.every(prereq => {
+      if (prereq.includes(' or ')) {
+        const options = prereq.split(' or ');
+        return options.some(option => completedCourses.includes(option.trim()));
+      }
+      return completedCourses.includes(prereq);
+    });
+  }, [completedCourses, courses]);
   
   // Get course recommendations - memoized
   const getCourseRecommendations = useCallback(() => {
     // Filter for courses that have prerequisites met but aren't completed
-    const availableCourses = plannerData.courses.filter(course => 
+    const availableCourses = courses.filter(course => 
       !completedCourses.includes(course.course_code) && 
       arePrerequisitesMet(course.course_code)
     );
@@ -182,22 +210,24 @@ export const PlannerProvider = ({ children }) => {
     
     // Sort by credits (ascending) to prioritize easier courses first
     return recommendations.sort((a, b) => parseInt(a.credits) - parseInt(b.credits));
-  }, [completedCourses, arePrerequisitesMet]);
+  }, [completedCourses, arePrerequisitesMet, courses]);
 
   // Calculate total credits - memoized
-  const calculateCredits = useCallback((courses) => {
-    return courses.reduce((total, courseCode) => {
-      const course = plannerData.courses.find(c => c.course_code === courseCode);
-      return total + (course ? parseInt(course.credits) : 0);
+  const calculateCredits = useCallback((courseCodes) => {
+    if (!courseCodes || courseCodes.length === 0) return 0;
+    
+    return courseCodes.reduce((total, code) => {
+      const course = courses.find(c => c.course_code === code);
+      return total + (course ? course.credits : 0);
     }, 0);
-  }, []);
+  }, [courses]);
   
   // Get term offerings data - memoized
   const termOfferings = useMemo(() => {
     const offerings = {};
     
     // Group courses by term offered
-    plannerData.courses.forEach(course => {
+    courses.forEach(course => {
       if (course.terms_offered && course.terms_offered.length > 0) {
         course.terms_offered.forEach(term => {
           if (!offerings[term]) {
@@ -209,11 +239,11 @@ export const PlannerProvider = ({ children }) => {
     });
     
     return offerings;
-  }, []);
+  }, [courses]);
   
   // Memoize the context value to prevent unnecessary re-renders
   const contextValue = useMemo(() => ({
-    courses: plannerData.courses,
+    courses,
     degreeRequirements: plannerData.degree_requirements,
     termOfferings,
     completedCourses,
@@ -234,6 +264,7 @@ export const PlannerProvider = ({ children }) => {
     loading,
     error
   }), [
+    courses,
     completedCourses,
     plannedCourses,
     markCourseCompleted,

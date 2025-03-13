@@ -13,6 +13,38 @@ const Dashboard = () => {
     courses
   } = usePlannerContext();
   
+  // Inspirational quotes with Sylvia Plath included
+  const quotes = [
+    { text: "Perhaps when we find ourselves wanting everything, it is because we are dangerously close to wanting nothing.", author: "Sylvia Plath" },
+    { text: "The good life is a process, not a state of being.", author: "Carl Rogers" },
+    { text: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", author: "Aristotle" },
+    { text: "The mind is not a vessel to be filled, but a fire to be kindled.", author: "Plutarch" },
+    { text: "Education is not the filling of a pail, but the lighting of a fire.", author: "W.B. Yeats" },
+    { text: "The purpose of psychology is to give us a completely different idea of the things we know best.", author: "Paul Valéry" }
+  ];
+  
+  // Psychology fun facts
+  const funFacts = [
+    "Sylvia Plath's novel 'The Bell Jar' is considered a seminal work on mental illness and is often studied in psychology courses.",
+    "The human brain processes images 60,000 times faster than text.",
+    "The average person has about 70,000 thoughts per day.",
+    "Dreams are primarily visual, with little to no sound.",
+    "The field of positive psychology was established by Martin Seligman in 1998.",
+    "The left side of your brain controls the right side of your body, and vice versa."
+  ];
+  
+  // Random quote and fun fact
+  const [quote, setQuote] = useState(quotes[0]);
+  const [funFact, setFunFact] = useState(funFacts[0]);
+  
+  // Set random quote and fun fact on mount
+  useEffect(() => {
+    const randomQuoteIndex = Math.floor(Math.random() * quotes.length);
+    const randomFactIndex = Math.floor(Math.random() * funFacts.length);
+    setQuote(quotes[randomQuoteIndex]);
+    setFunFact(funFacts[randomFactIndex]);
+  }, []);
+  
   // Calculate degree progress
   const progress = useMemo(() => {
     const totalCredits = 180; // Fixed total credits
@@ -49,79 +81,149 @@ const Dashboard = () => {
   ];
   
   // Current term
-  const currentTerm = "Winter 2025";
+  const currentTerm = "Spring 2025";
   
-  // Get current term courses with details
+  // Get courses for current term
   const currentTermCourses = useMemo(() => {
-    const termCourses = plannedCourses["Winter 2025"] || [];
-    return termCourses.map(courseCode => {
-      return courses.find(c => c.course_code === courseCode);
-    }).filter(Boolean);
-  }, [plannedCourses, courses]);
-  
-  // Psychology quotes rotation
-  const psychologyQuotes = [
-    {
-      quote: "Perhaps when we find ourselves wanting everything, it is because we are dangerously close to wanting nothing.",
-      author: "Sylvia Plath",
-      fact: "Sylvia Plath's novel 'The Bell Jar' is considered a seminal work on mental illness."
-    },
-    {
-      quote: "The good life is a process, not a state of being. It is a direction, not a destination.",
-      author: "Carl Rogers",
-      fact: "Carl Rogers developed person-centered therapy, focusing on the client's capacity for self-direction."
-    },
-    {
-      quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-      author: "Aristotle",
-      fact: "Aristotle's work on the psyche laid foundations for modern psychological concepts."
-    },
-    {
-      quote: "The mind is not a vessel to be filled, but a fire to be kindled.",
-      author: "Plutarch",
-      fact: "Ancient Greek philosophers like Plutarch were early contributors to psychological thought."
-    },
-    {
-      quote: "Between stimulus and response there is a space. In that space is our power to choose our response.",
-      author: "Viktor Frankl",
-      fact: "Viktor Frankl developed logotherapy after surviving Nazi concentration camps."
-    }
-  ];
-  
-  // Select a random quote on component mount
-  const [currentQuote, setCurrentQuote] = useState(0);
-  
-  useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * psychologyQuotes.length);
-    setCurrentQuote(randomIndex);
-  }, []);
+    return (plannedCourses[currentTerm] || []).map(courseCode => 
+      courses.find(c => c.course_code === courseCode)
+    ).filter(Boolean);
+  }, [plannedCourses, currentTerm, courses]);
   
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-primary mb-8 transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn">
-        Welcome to Your Psychology Degree Planner
-      </h1>
-      
-      {/* Psychology Quote */}
-      <div className="bg-secondary p-6 rounded-lg mb-8 border-l-4 border-primary transition-all duration-300 hover:shadow-lg animate-fadeIn" style={{ animationDelay: '100ms' }}>
-        <p className="text-gray-700 italic">
-          "{psychologyQuotes[currentQuote].quote}"
-        </p>
-        <p className="text-right text-sm text-primary mt-2">— {psychologyQuotes[currentQuote].author}</p>
-        <div className="mt-4 pt-3 border-t border-gray-200">
-          <p className="text-xs text-gray-600">
-            <span className="font-medium">Psychology Fact:</span> {psychologyQuotes[currentQuote].fact}
-          </p>
+    <div className="container mx-auto px-4 py-8 max-w-6xl">
+      {/* Quote and Fun Fact */}
+      <div className="bg-white rounded-lg shadow-md p-6 mb-8 border-t-4 border-secondary animate-fadeIn">
+        <p className="text-lg italic text-gray-700">"{quote.text}"</p>
+        <p className="text-right text-sm text-gray-500 mt-2">— {quote.author}</p>
+        <div className="mt-4 pt-4 border-t border-gray-100">
+          <p className="text-sm text-gray-600"><span className="font-medium">Psychology Fun Fact:</span> {funFact}</p>
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Degree Progress Summary */}
-        <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-primary transition-all duration-300 hover:shadow-lg animate-fadeInUp" style={{ animationDelay: '200ms' }}>
-          <h2 className="text-xl font-semibold text-primary mb-4">Degree Progress</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="md:col-span-2 space-y-8">
+          {/* Current term courses */}
+          <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-primary animate-fadeInUp">
+            <h2 className="text-xl font-semibold text-primary mb-4">Spring 2025 Courses</h2>
+            
+            {currentTermCourses.length === 0 ? (
+              <div className="text-center py-8">
+                <p className="text-gray-500">No courses planned for Spring 2025</p>
+                <Link 
+                  to="/planner" 
+                  className="inline-block mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
+                >
+                  Plan Your Courses
+                </Link>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {currentTermCourses.map(course => (
+                  <div key={course.course_code} className="p-4 border border-gray-200 rounded-md hover:shadow-sm transition-all duration-300">
+                    <div className="flex justify-between">
+                      <div>
+                        <p className="font-mono text-xs text-gray-600">{course.course_code}</p>
+                        <h3 className="font-medium">{course.title}</h3>
+                        <p className="text-sm text-gray-700">{course.credits} credits</p>
+                        
+                        {course.instructor && (
+                          <p className="text-xs text-gray-600 mt-1">
+                            <span className="font-medium">Instructor:</span> {course.instructor}
+                          </p>
+                        )}
+                        
+                        {course.meeting_pattern && (
+                          <p className="text-xs text-gray-600 mt-1">
+                            <span className="font-medium">Schedule:</span> {course.meeting_pattern}
+                          </p>
+                        )}
+                      </div>
+                      <Link 
+                        to="/planner" 
+                        className="text-xs text-primary hover:text-primary-dark"
+                      >
+                        Edit
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-48 h-48">
+          {/* Notes component */}
+          <Notes />
+          
+          {/* Psychology Opportunities - Oregon-specific and PhD-focused */}
+          <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-secondary animate-fadeInUp">
+            <h2 className="text-xl font-semibold text-secondary mb-4">PhD Track Opportunities in Oregon</h2>
+            
+            <div className="mb-6">
+              <h3 className="text-lg font-medium text-gray-800 mb-3">Research Opportunities</h3>
+              <div className="space-y-4">
+                <div className="p-3 bg-gray-50 rounded-md">
+                  <h4 className="font-medium">Oregon State University Research Lab</h4>
+                  <p className="text-sm text-gray-600">Work with faculty on research projects to build your PhD application</p>
+                  <p className="text-xs text-gray-500 mt-1">Applications for summer research positions due in February</p>
+                </div>
+                
+                <div className="p-3 bg-gray-50 rounded-md">
+                  <h4 className="font-medium">Center for Cognitive Neuroscience</h4>
+                  <p className="text-sm text-gray-600">Gain experience with fMRI and other neuroscience techniques</p>
+                  <p className="text-xs text-gray-500 mt-1">Contact Dr. Martinez by April for Fall positions</p>
+                </div>
+                
+                <div className="p-3 bg-gray-50 rounded-md">
+                  <h4 className="font-medium">Oregon Health & Science University</h4>
+                  <p className="text-sm text-gray-600">Clinical psychology research opportunities in Portland</p>
+                  <p className="text-xs text-gray-500 mt-1">Competitive summer internship program - apply by January</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="text-lg font-medium text-gray-800 mb-3">PhD Preparation</h3>
+              <div className="space-y-4">
+                <div className="p-3 bg-gray-50 rounded-md">
+                  <h4 className="font-medium">GRE Preparation Workshop</h4>
+                  <p className="text-sm text-gray-600">Free workshops offered by the Psychology Department</p>
+                  <p className="text-xs text-gray-500 mt-1">Sessions begin in Fall for Spring test dates</p>
+                </div>
+                
+                <div className="p-3 bg-gray-50 rounded-md">
+                  <h4 className="font-medium">Graduate School Application Seminar</h4>
+                  <p className="text-sm text-gray-600">Learn how to craft competitive PhD applications</p>
+                  <p className="text-xs text-gray-500 mt-1">Offered every Winter term on Thursdays at 4pm</p>
+                </div>
+                
+                <div className="p-3 bg-gray-50 rounded-md">
+                  <h4 className="font-medium">Faculty Mentorship Program</h4>
+                  <p className="text-sm text-gray-600">Connect with faculty who can write strong recommendation letters</p>
+                  <p className="text-xs text-gray-500 mt-1">Applications open in September</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-4 text-right">
+              <a 
+                href="https://www.apa.org/education/grad" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-primary hover:text-primary-dark"
+              >
+                Explore PhD programs at APA.org →
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-8">
+          {/* Degree progress */}
+          <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-primary animate-fadeInUp">
+            <h2 className="text-xl font-semibold text-primary mb-4">Degree Progress</h2>
+            
+            <div className="h-64 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -140,168 +242,64 @@ const Dashboard = () => {
                 </PieChart>
               </ResponsiveContainer>
             </div>
-          </div>
-          
-          <div className="grid grid-cols-3 gap-2 mb-4">
-            <div className="text-center">
-              <p className="text-sm text-gray-600">Completed</p>
-              <p className="text-xl font-semibold text-primary">{progress.completedPercentage}%</p>
-              <p className="text-xs text-gray-500">{progress.completed} credits</p>
-            </div>
-            <div className="text-center">
-              <p className="text-sm text-gray-600">Planned</p>
-              <p className="text-xl font-semibold text-primary-light">{progress.plannedPercentage}%</p>
-              <p className="text-xs text-gray-500">{progress.planned} credits</p>
-            </div>
-            <div className="text-center">
-              <p className="text-sm text-gray-600">Remaining</p>
-              <p className="text-xl font-semibold text-gray-400">{progress.remainingPercentage}%</p>
-              <p className="text-xs text-gray-500">{progress.remaining} credits</p>
-            </div>
-          </div>
-          
-          <div className="p-4 bg-secondary rounded-lg">
-            <p className="font-medium text-primary">Current Term: {currentTerm}</p>
-            <p className="text-sm text-gray-600 mt-1">Graduation Target: June 2028</p>
-          </div>
-        </div>
-        
-        {/* Quick Links */}
-        <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-primary transition-all duration-300 hover:shadow-lg animate-fadeInUp" style={{ animationDelay: '300ms' }}>
-          <h2 className="text-xl font-semibold text-primary mb-4">Quick Links</h2>
-          
-          <div className="space-y-3">
-            <Link 
-              to="/planner" 
-              className="block p-3 bg-secondary rounded-md hover:bg-primary hover:text-white transition-all duration-300"
-            >
-              <div className="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-                <span>Term Planner</span>
-              </div>
-            </Link>
             
-            <Link 
-              to="/search" 
-              className="block p-3 bg-secondary rounded-md hover:bg-primary hover:text-white transition-all duration-300"
-            >
-              <div className="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <span>Course Search</span>
+            <div className="flex justify-between mt-4">
+              <div className="text-center">
+                <p className="text-sm font-medium">Completed</p>
+                <p className="text-2xl font-bold text-primary">{progress.completedPercentage}%</p>
+                <p className="text-xs text-gray-500">{progress.completed} credits</p>
               </div>
-            </Link>
+              
+              <div className="text-center">
+                <p className="text-sm font-medium">Planned</p>
+                <p className="text-2xl font-bold text-secondary">{progress.plannedPercentage}%</p>
+                <p className="text-xs text-gray-500">{progress.planned} credits</p>
+              </div>
+              
+              <div className="text-center">
+                <p className="text-sm font-medium">Remaining</p>
+                <p className="text-2xl font-bold text-gray-400">{progress.remainingPercentage}%</p>
+                <p className="text-xs text-gray-500">{progress.remaining} credits</p>
+              </div>
+            </div>
             
-            <Link 
-              to="/progress" 
-              className="block p-3 bg-secondary rounded-md hover:bg-primary hover:text-white transition-all duration-300"
-            >
-              <div className="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-                <span>Degree Progress</span>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-      
-      {/* Current Term Courses */}
-      <div className="mt-8 bg-white rounded-lg shadow-md p-6 border-t-4 border-primary transition-all duration-300 hover:shadow-lg animate-fadeInUp" style={{ animationDelay: '400ms' }}>
-        <h2 className="text-xl font-semibold text-primary mb-4">Your {currentTerm} Courses</h2>
-        
-        {currentTermCourses.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {currentTermCourses.map((course, index) => (
-              <div 
-                key={course.course_code} 
-                className="p-4 border rounded-lg hover:shadow-md transition-all duration-300 animate-fadeIn"
-                style={{ animationDelay: `${500 + (index * 100)}ms` }}
+            <div className="mt-4">
+              <Link 
+                to="/requirements" 
+                className="block w-full text-center py-2 bg-secondary text-white rounded-md hover:bg-secondary-dark transition-colors"
               >
-                <p className="font-mono text-xs text-gray-500">{course.course_code}</p>
-                <p className="font-medium">{course.title}</p>
-                <p className="text-sm text-gray-600 mt-1">{course.credits} credits</p>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-8 bg-secondary rounded-lg">
-            <p className="text-gray-600">No courses planned for {currentTerm}</p>
-            <Link to="/planner" className="mt-2 inline-block text-primary hover:text-primary-dark font-medium transition-all duration-300 hover:translate-x-1">
-              Add courses to your plan →
-            </Link>
-          </div>
-        )}
-      </div>
-      
-      {/* Notes Section - Add this before the Internships & Extracurriculars section */}
-      <div className="mt-8">
-        <Notes />
-      </div>
-      
-      {/* Internships & Extracurriculars */}
-      <div className="mt-8 bg-white rounded-lg shadow-md p-6 border-t-4 border-primary transition-all duration-300 hover:shadow-lg animate-fadeInUp" style={{ animationDelay: '600ms' }}>
-        <h2 className="text-xl font-semibold text-primary mb-4">Psychology Opportunities</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Internships */}
-          <div>
-            <h3 className="text-lg font-medium text-primary-dark mb-3">Recommended Internships</h3>
-            <ul className="space-y-3">
-              <li className="p-3 border rounded-md hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn" style={{ animationDelay: '700ms' }}>
-                <p className="font-medium">University Counseling Center</p>
-                <p className="text-sm text-gray-600">Gain practical experience in a clinical setting</p>
-                <p className="text-xs text-primary mt-1">Apply in Fall for Spring positions</p>
-              </li>
-              <li className="p-3 border rounded-md hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn" style={{ animationDelay: '800ms' }}>
-                <p className="font-medium">Child Development Research Lab</p>
-                <p className="text-sm text-gray-600">Work with faculty on developmental psychology research</p>
-                <p className="text-xs text-primary mt-1">Applications open year-round</p>
-              </li>
-              <li className="p-3 border rounded-md hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn" style={{ animationDelay: '900ms' }}>
-                <p className="font-medium">Community Mental Health Center</p>
-                <p className="text-sm text-gray-600">Support mental health services in the community</p>
-                <p className="text-xs text-primary mt-1">Summer internship applications due in March</p>
-              </li>
-            </ul>
+                View Degree Requirements
+              </Link>
+            </div>
           </div>
           
-          {/* Extracurriculars */}
-          <div>
-            <h3 className="text-lg font-medium text-primary-dark mb-3">Recommended Extracurriculars</h3>
-            <ul className="space-y-3">
-              <li className="p-3 border rounded-md hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn" style={{ animationDelay: '700ms' }}>
-                <p className="font-medium">Psychology Student Association</p>
-                <p className="text-sm text-gray-600">Network with peers and attend guest lectures</p>
-                <p className="text-xs text-primary mt-1">Meetings every Tuesday at 5pm</p>
-              </li>
-              <li className="p-3 border rounded-md hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn" style={{ animationDelay: '800ms' }}>
-                <p className="font-medium">Psi Chi Honor Society</p>
-                <p className="text-sm text-gray-600">Join the international psychology honor society</p>
-                <p className="text-xs text-primary mt-1">Applications due in October</p>
-              </li>
-              <li className="p-3 border rounded-md hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn" style={{ animationDelay: '900ms' }}>
-                <p className="font-medium">Peer Mentoring Program</p>
-                <p className="text-sm text-gray-600">Help new psychology students navigate their first year</p>
-                <p className="text-xs text-primary mt-1">Training begins in September</p>
-              </li>
-            </ul>
+          {/* Quick links */}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-xl font-semibold text-primary mb-4">Quick Links</h2>
+            
+            <div className="space-y-2">
+              <Link 
+                to="/planner" 
+                className="block w-full text-left px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
+              >
+                Term Planner
+              </Link>
+              
+              <Link 
+                to="/search" 
+                className="block w-full text-left px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
+              >
+                Course Search
+              </Link>
+              
+              <Link 
+                to="/completed" 
+                className="block w-full text-left px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
+              >
+                Completed Courses
+              </Link>
+            </div>
           </div>
-        </div>
-        
-        <div className="mt-6 text-center">
-          <a 
-            href="https://www.apa.org/education/undergrad/research-opportunities" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-primary hover:text-primary-dark font-medium transition-all duration-300 hover:translate-x-1 inline-block"
-          >
-            Explore more opportunities at APA.org →
-          </a>
         </div>
       </div>
     </div>

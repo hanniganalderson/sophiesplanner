@@ -9,13 +9,14 @@ const TermPlanner = () => {
     removeCourseFromPlan,
     courses,
     calculateCredits,
-    arePrerequisitesMet
+    arePrerequisitesMet,
+    completedCourses
   } = usePlannerContext();
   
   // State for course catalog
   const [showCatalog, setShowCatalog] = useState(false);
   const [catalogFilter, setCatalogFilter] = useState('');
-  const [selectedTerm, setSelectedTerm] = useState('Winter 2025');
+  const [selectedTerm, setSelectedTerm] = useState('Spring 2025');
   const [animateTerms, setAnimateTerms] = useState(false);
   
   // Trigger animation on mount
@@ -23,7 +24,7 @@ const TermPlanner = () => {
     setAnimateTerms(true);
   }, []);
   
-  // Only show terms from Fall 2024 onwards
+  // Include Fall 2024 and Winter 2025
   const terms = [
     "Fall 2024",
     "Winter 2025",
@@ -39,245 +40,222 @@ const TermPlanner = () => {
     "Spring 2028"
   ];
   
-  // Filter courses for catalog
+  // Extract the season from a term (e.g., "Fall 2024" -> "Fall")
+  const getSeasonFromTerm = (term) => {
+    return term.split(' ')[0];
+  };
+  
+  // Get missing prerequisites for a course
+  const getMissingPrerequisites = (courseCode) => {
+    const course = courses.find(c => c.course_code === courseCode);
+    if (!course || !course.prerequisites || course.prerequisites.length === 0) {
+      return [];
+    }
+    
+    const missing = [];
+    
+    course.prerequisites.forEach(prereq => {
+      if (prereq.includes(' or ')) {
+        // Handle "or" conditions
+        const options = prereq.split(' or ');
+        const anyMet = options.some(option => completedCourses.includes(option.trim()));
+        if (!anyMet) {
+          missing.push(prereq);
+        }
+      } else if (!completedCourses.includes(prereq)) {
+        missing.push(prereq);
+      }
+    });
+    
+    return missing;
+  };
+  
+  // Filter courses based on search term and selected term's season
   const filteredCourses = courses.filter(course => {
     // Filter by search term
-    if (catalogFilter && !course.course_code.toLowerCase().includes(catalogFilter.toLowerCase()) && 
+    if (catalogFilter && 
+        !course.course_code.toLowerCase().includes(catalogFilter.toLowerCase()) && 
         !course.title.toLowerCase().includes(catalogFilter.toLowerCase())) {
       return false;
     }
     
-    // Only show Psychology and HDFS courses
-    return course.course_code.startsWith('PSY') || course.course_code.startsWith('HDFS');
+    // Filter by term availability - only show courses available in the selected term's season
+    const selectedSeason = getSeasonFromTerm(selectedTerm);
+    if (!course.terms_offered || !course.terms_offered.includes(selectedSeason)) {
+      return false;
+    }
+    
+    // Don't show completed courses
+    if (completedCourses.includes(course.course_code)) {
+      return false;
+    }
+    
+    // Don't show courses already planned for this term
+    if (plannedCourses[selectedTerm]?.includes(course.course_code)) {
+      return false;
+    }
+    
+    return true;
   });
   
-  // Get course details
-  const getCourseDetails = (courseCode) => {
-    return courses.find(course => course.course_code === courseCode);
-  };
-  
-  // Check prerequisites for a term
-  const checkPrereqsForTerm = (courseCode, term) => {
-    return arePrerequisitesMet(courseCode, term);
-  };
-  
-  // Calculate credits for a term
-  const getTermCredits = (termCourses) => {
-    return termCourses.reduce((total, courseCode) => {
-      const course = getCourseDetails(courseCode);
-      return total + (course ? parseInt(course.credits) : 0);
-    }, 0);
-  };
-  
-  // Handle moving a course to a different term
-  const moveCourse = (courseCode, fromTerm, toTerm) => {
-    if (fromTerm !== toTerm) {
-      removeCourseFromPlan(courseCode, fromTerm);
-      addCourseToPlan(courseCode, toTerm);
+  // Handle selecting a term
+  const handleTermSelect = (term) => {
+    setSelectedTerm(term);
+    if (!showCatalog) {
+      setShowCatalog(true); // Automatically show catalog when selecting a term
     }
   };
   
-  // Check if a course is already planned
-  const isCoursePlanned = (courseCode) => {
-    return Object.values(plannedCourses).some(termCourses => 
-      termCourses.includes(courseCode)
-    );
-  };
-  
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="animate-fadeIn">
-        <h1 className="text-3xl font-bold text-primary mb-4 transition-all duration-300 hover:translate-y-[-2px]">Term Planner</h1>
-        <p className="text-gray-600 mb-6">
-          Plan your courses by term. Current term: <span className="font-medium text-primary">Winter 2025</span>
-        </p>
-        
-        {/* Course Catalog Toggle */}
-        <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between">
-          <button
-            onClick={() => setShowCatalog(!showCatalog)}
-            className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-all duration-300 mb-4 md:mb-0 shadow-md hover:shadow-lg hover:translate-y-[-2px]"
-          >
-            {showCatalog ? 'Hide Course Catalog' : 'Show Course Catalog'}
-          </button>
-          
-          <div className="text-sm text-gray-500">
-            <span className="font-medium">Graduation Target:</span> June 2028
-          </div>
-        </div>
-      </div>
+    <div className="p-4 md:p-6">
+      <h1 className="text-2xl font-bold text-gray-800 mb-6">Term Planner</h1>
       
-      {/* Course Catalog */}
-      <div 
-        className={`${
-          showCatalog ? 'animate-slideDown max-h-[800px]' : 'max-h-0 overflow-hidden opacity-0'
-        } bg-white rounded-lg shadow-md p-6 mb-8 border-t-4 border-primary transition-all duration-500 ease-in-out`}
-      >
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-          <h2 className="text-xl font-semibold text-primary mb-4 md:mb-0">Psychology & HDFS Course Catalog</h2>
-          
-          <div className="w-full md:w-64">
-            <input
-              type="text"
-              placeholder="Search courses..."
-              value={catalogFilter}
-              onChange={(e) => setCatalogFilter(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-            />
-          </div>
-        </div>
-        
-        <div className="mb-4">
-          <label htmlFor="term-select" className="block text-sm font-medium text-gray-700 mb-1">
-            Add to Term:
-          </label>
-          <select
-            id="term-select"
-            value={selectedTerm}
-            onChange={(e) => setSelectedTerm(e.target.value)}
-            className="w-full md:w-64 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-          >
-            {terms.map(term => (
-              <option key={term} value={term}>{term}</option>
-            ))}
-          </select>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-96 overflow-y-auto p-2">
-          {filteredCourses.map((course, index) => {
-            const isPlanned = isCoursePlanned(course.course_code);
-            const prereqsMet = checkPrereqsForTerm(course.course_code, selectedTerm);
-            
-            return (
-              <div 
-                key={course.course_code} 
-                className="border rounded-lg p-3 hover:shadow-md transition-all duration-300 hover:translate-y-[-2px] animate-fadeIn"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <p className="font-mono text-xs text-gray-500">{course.course_code}</p>
-                <p className="font-medium text-sm">{course.title}</p>
-                <p className="text-xs text-gray-600 mt-1">{course.credits} credits</p>
-                
-                <div className="flex justify-between items-center mt-2">
-                  <div>
-                    {course.terms_offered && (
-                      <span className="text-xs bg-secondary text-primary-dark px-2 py-0.5 rounded">
-                        {course.terms_offered.join(', ')}
-                      </span>
-                    )}
-                  </div>
-                  
-                  {!isPlanned && (
-                    <button
-                      onClick={() => addCourseToPlan(course.course_code, selectedTerm)}
-                      disabled={!prereqsMet}
-                      className={`text-xs px-2 h-8 rounded-md transition-all duration-300 ${
-                        prereqsMet 
-                          ? 'bg-primary text-white hover:bg-primary-dark hover:shadow-md' 
-                          : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                      }`}
-                    >
-                      Add
-                    </button>
-                  )}
-                  
-                  {isPlanned && (
-                    <span className="text-xs px-2 py-1 bg-gray-200 text-gray-600 rounded-md">
-                      Planned
-                    </span>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      
-      {/* Term Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Terms grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {terms.map((term, index) => {
           const termCourses = plannedCourses[term] || [];
-          const termCredits = getTermCredits(termCourses);
+          const termCredits = calculateCredits(termCourses);
+          const isSelected = selectedTerm === term;
           
           return (
             <div 
-              key={term} 
-              className={`bg-white rounded-lg shadow-md overflow-hidden border-t-4 border-primary transition-all duration-500 hover:shadow-lg ${animateTerms ? 'animate-fadeInUp' : 'opacity-0'}`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              key={term}
+              className={`bg-white rounded-lg shadow-md p-4 border-t-4 
+                ${isSelected ? 'border-primary-dark bg-primary-50' : 'border-primary'} 
+                transition-all duration-300 hover:shadow-lg 
+                ${animateTerms ? 'animate-fadeInUp' : ''} 
+                cursor-pointer relative`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => handleTermSelect(term)}
             >
-              <div className="p-4 bg-gray-50 border-b">
-                <div className="flex justify-between items-center">
-                  <h3 className="font-semibold text-primary">{term}</h3>
-                  <span className="text-sm text-gray-600">{termCredits} credits</span>
+              {isSelected && (
+                <div className="absolute -top-2 -right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">
+                  Selected
                 </div>
+              )}
+              
+              <div className="flex justify-between items-center mb-3">
+                <h2 className="text-lg font-semibold text-gray-800">{term}</h2>
+                <span className="text-sm font-medium text-gray-600">
+                  {termCredits} credits
+                </span>
               </div>
               
-              <div className="p-4 min-h-[200px]">
-                {termCourses.length > 0 ? (
-                  <div className="space-y-3">
-                    {termCourses.map((courseCode, courseIndex) => {
-                      const course = getCourseDetails(courseCode);
-                      const prereqsMet = checkPrereqsForTerm(courseCode, term);
-                      
-                      return course ? (
-                        <div
-                          key={courseCode}
-                          className={`p-3 rounded-md border transition-all duration-300 hover:shadow-md animate-fadeIn`}
-                          style={{ animationDelay: `${(index * 100) + (courseIndex * 50)}ms` }}
-                        >
-                          <div className="flex justify-between items-start">
-                            <div>
-                              <p className="font-mono text-sm text-gray-500">{course.course_code}</p>
-                              <p className="font-medium">{course.title}</p>
-                              <p className="text-sm text-gray-600">{course.credits} credits</p>
-                              
-                              {!prereqsMet && (
-                                <p className="text-xs text-red-500 mt-1 animate-pulse">
-                                  Prerequisites not met
-                                </p>
-                              )}
-                              
-                              <div className="mt-2">
-                                <select
-                                  className="text-xs border border-gray-300 rounded p-1 transition-all duration-300 focus:ring-2 focus:ring-primary focus:border-transparent"
-                                  value=""
-                                  onChange={(e) => {
-                                    if (e.target.value) {
-                                      moveCourse(courseCode, term, e.target.value);
-                                      e.target.value = "";
-                                    }
-                                  }}
-                                >
-                                  <option value="">Move to...</option>
-                                  {terms.filter(t => t !== term).map(t => (
-                                    <option key={t} value={t}>{t}</option>
-                                  ))}
-                                </select>
-                              </div>
-                            </div>
-                            
-                            <button
-                              onClick={() => removeCourseFromPlan(courseCode, term)}
-                              className="text-gray-400 hover:text-red-500 transition-colors duration-300"
-                            >
-                              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                              </svg>
-                            </button>
-                          </div>
+              {termCourses.length > 0 ? (
+                <ul className="space-y-2">
+                  {termCourses.map(courseCode => {
+                    const course = courses.find(c => c.course_code === courseCode);
+                    if (!course) return null;
+                    
+                    return (
+                      <li key={courseCode} className="flex justify-between items-center p-2 bg-gray-50 rounded">
+                        <div>
+                          <span className="font-medium text-gray-800">{courseCode}</span>
+                          <p className="text-xs text-gray-600">{course.title}</p>
+                          <p className="text-xs text-gray-500">{course.credits} credits</p>
                         </div>
-                      ) : null;
-                    })}
-                  </div>
-                ) : (
-                  <div className="text-center py-8 text-gray-400">
-                    No courses planned for this term
-                  </div>
-                )}
-              </div>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation(); // Prevent term selection when clicking remove
+                            removeCourseFromPlan(courseCode, term);
+                          }}
+                          className="text-xs px-2 py-1 rounded bg-red-100 text-red-700 hover:bg-red-200"
+                        >
+                          Remove
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : (
+                <p className="text-sm text-gray-500 italic">No courses planned for this term</p>
+              )}
             </div>
           );
         })}
+      </div>
+      
+      {/* Course catalog section */}
+      <div className="mb-6">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold text-gray-800">
+            Courses Available for {selectedTerm}
+          </h2>
+          
+          <button
+            onClick={() => setShowCatalog(!showCatalog)}
+            className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors shadow-md"
+          >
+            {showCatalog ? 'Hide Courses' : 'Show Available Courses'}
+          </button>
+        </div>
+        
+        {showCatalog && (
+          <div className="bg-white rounded-lg shadow-md p-4 animate-fadeIn">
+            <div className="mb-4">
+              <input
+                type="text"
+                placeholder="Search courses..."
+                value={catalogFilter}
+                onChange={(e) => setCatalogFilter(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+              />
+            </div>
+            
+            {filteredCourses.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {filteredCourses.map(course => {
+                  const prereqsMet = arePrerequisitesMet(course.course_code);
+                  
+                  return (
+                    <div key={course.course_code} className="p-3 border border-gray-200 rounded-md hover:bg-gray-50">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-medium text-gray-800">{course.course_code}</h3>
+                          <p className="text-sm text-gray-700">{course.title}</p>
+                          <p className="text-xs text-gray-600 mt-1">{course.credits} credits</p>
+                          
+                          {/* Display all terms the course is offered in */}
+                          <p className="text-xs text-gray-500 mt-1">
+                            Available: {course.terms_offered ? course.terms_offered.join(', ') : 'Not specified'}
+                          </p>
+                        </div>
+                        
+                        <button
+                          onClick={() => addCourseToPlan(course.course_code, selectedTerm)}
+                          disabled={!prereqsMet}
+                          className={`text-xs px-2 py-1 rounded ${
+                            !prereqsMet
+                              ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                              : 'bg-primary text-white hover:bg-primary-dark'
+                          }`}
+                          title={!prereqsMet ? 'Prerequisites not met' : ''}
+                        >
+                          Add to {selectedTerm}
+                        </button>
+                      </div>
+                      
+                      {!prereqsMet && (
+                        <div className="mt-2 text-xs text-red-600">
+                          <p className="font-medium">Prerequisites not met:</p>
+                          <ul className="list-disc list-inside">
+                            {getMissingPrerequisites(course.course_code).map((prereq, i) => (
+                              <li key={i}>{prereq}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="p-4 bg-gray-50 rounded-md text-center text-gray-500">
+                No courses found for {selectedTerm} matching your search
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
