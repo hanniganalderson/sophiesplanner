@@ -18,6 +18,8 @@ const TermPlanner = () => {
   const [catalogFilter, setCatalogFilter] = useState('');
   const [selectedTerm, setSelectedTerm] = useState('Spring 2025');
   const [animateTerms, setAnimateTerms] = useState(false);
+  const [showMinorInfo, setShowMinorInfo] = useState(false);
+  const [selectedMinor, setSelectedMinor] = useState('hdfs'); // 'hdfs' or 'ecde'
   
   // Trigger animation on mount
   useEffect(() => {
@@ -182,11 +184,130 @@ const TermPlanner = () => {
                 );
               })}
             </div>
+            
+            {/* Minor Information Button */}
+            <div className="mt-6">
+              <button
+                onClick={() => setShowMinorInfo(!showMinorInfo)}
+                className="w-full px-4 py-3 text-base font-medium rounded bg-indigo-600 text-white hover:bg-indigo-700 transition-colors shadow-md"
+              >
+                {showMinorInfo ? 'Hide Minor Options' : 'Show HDFS Minor Options'}
+              </button>
+            </div>
           </div>
         </div>
         
         {/* Main content area */}
         <div className="md:col-span-2">
+          {/* Minor Information Panel */}
+          {showMinorInfo && (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6 animate-fadeIn">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-semibold text-gray-800">HDFS Minor Options</h3>
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => setSelectedMinor('hdfs')}
+                    className={`px-3 py-1 text-sm rounded ${
+                      selectedMinor === 'hdfs' 
+                        ? 'bg-primary text-white' 
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                  >
+                    HDFS Minor
+                  </button>
+                  <button
+                    onClick={() => setSelectedMinor('ecde')}
+                    className={`px-3 py-1 text-sm rounded ${
+                      selectedMinor === 'ecde' 
+                        ? 'bg-primary text-white' 
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                  >
+                    Early Childhood Minor
+                  </button>
+                </div>
+              </div>
+              
+              {selectedMinor === 'hdfs' ? (
+                <div className="animate-fadeIn">
+                  <h4 className="text-lg font-medium text-gray-700 mb-2">Human Development & Family Sciences Minor (28-31 credits)</h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Students minoring in Human Development and Family Sciences will learn how people change across the life
+                    course within the contexts of families, schools, and communities. This minor complements other academic degrees
+                    such as education, liberal studies, psychology, social science and allied health sciences.
+                  </p>
+                  
+                  <div className="mb-4">
+                    <h5 className="font-medium text-gray-700 mb-2">Required Core (19 Credits):</h5>
+                    <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                      <li>HDFS 201 - Contemporary Families in US (3)</li>
+                      <li>HDFS 311 - Infant & Child Development (4)</li>
+                      <li>HDFS 313 - Adolescent Development (4)</li>
+                      <li>HDFS 314 - Adult Development & Aging (4)</li>
+                      <li>HDFS 341 - Family Studies (4)</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 className="font-medium text-gray-700 mb-2">Electives (9-12 Credits) - Select 3 of the following:</h5>
+                    <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                      <li>HDFS 240 - Human Sexuality (3)</li>
+                      <li>HDFS 262 - Intro. to Human Services (3)</li>
+                      <li>HDFS 360 - Critical Thinking in HDFS (4)</li>
+                      <li>HDFS 312 - Parenting Research & Application (4)</li>
+                      <li>HDFS 431 - Family, School & Community (3)</li>
+                      <li>HDFS 432 - Children/Youth with Disabilities (3)</li>
+                      <li>HDFS 444 - Family Violence & Neglect (4)</li>
+                      <li>HDFS 447 - Families & Poverty (4)</li>
+                      <li>HDFS 460 - Family Policy (4)</li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div className="animate-fadeIn">
+                  <h4 className="text-lg font-medium text-gray-700 mb-2">Early Childhood Development and Education Minor (32 credits)</h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    This minor focuses on early childhood development and education, providing a foundation for working with young children.
+                  </p>
+                  
+                  <div className="mb-4">
+                    <h5 className="font-medium text-gray-700 mb-2">Required Core (26 Credits):</h5>
+                    <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                      <li>PSY 201 - General Psychology (4)</li>
+                      <li>PSY 202 - General Psychology (4)</li>
+                      <li>HDFS 311 - Infant & Child Development (4)</li>
+                      <li>HDFS 330 - Fostering Learning in Early Childhood (4)</li>
+                      <li>HDFS 331 - Directed Experience in EC (3)</li>
+                      <li>HDFS 341 - Family Studies (4)</li>
+                      <li>HDFS 431 - Family, School & Community (3)</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 className="font-medium text-gray-700 mb-2">Upper Division Electives (6 Credits) - Select from:</h5>
+                    <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                      <li>HDFS 312 - Parenting Research & Application (4)</li>
+                      <li>HDFS 432 - Children With Special Needs (3)</li>
+                      <li>HDFS 444 - Family Violence & Neglect (4)</li>
+                      <li>HDFS 447 - Families & Poverty (4)</li>
+                      <li>HDFS 460 - Family Policy (4)</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+              
+              <div className="mt-6 p-4 bg-blue-50 rounded-md border border-blue-200">
+                <h5 className="font-medium text-blue-800 mb-2">Minor Eligibility Requirements:</h5>
+                <ul className="list-disc list-inside text-sm text-blue-700 space-y-1">
+                  <li>Maintain a 2.0 or better OSU GPA</li>
+                  <li>All courses must be taken for a letter (A-F) grade</li>
+                  <li>No more than two attempts at any major course or pre-requisite course</li>
+                  <li>Minor is available to all majors, except those majoring in Human Development & Family Sciences</li>
+                </ul>
+              </div>
+            </div>
+          )}
+          
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-semibold text-gray-800">{selectedTerm}</h3>
