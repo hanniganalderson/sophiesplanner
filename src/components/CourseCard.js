@@ -2,7 +2,22 @@
 import React, { useState } from 'react';
 import { usePlannerContext } from '../context/PlannerContext';
 
-const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
+const CourseCard = ({ 
+  course, 
+  showActions = true, 
+  selectedTerm = null,
+  isCompleted,
+  isPlanned,
+  prereqsMet,
+  onMarkCompleted,
+  onUnmarkCompleted,
+  onAddToPlan,
+  plannableTerms,
+  setSelectedTerm,
+  termOfferings,
+  showDetailsButton = true,
+  showMarkCompletedButton = true
+}) => {
   const { 
     completedCourses, 
     plannedCourses,
@@ -15,13 +30,6 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
   
   const [showDetails, setShowDetails] = useState(false);
   
-  const isCompleted = completedCourses.includes(course.course_code);
-  
-  // Check if course is in any term plan
-  const isPlanned = Object.values(plannedCourses).some(
-    termCourses => termCourses.includes(course.course_code)
-  );
-  
   // Get the term this course is planned for
   const getPlannedTerm = () => {
     for (const [term, courses] of Object.entries(plannedCourses)) {
@@ -31,9 +39,6 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
     }
     return '';
   };
-  
-  // Check if prerequisites are met
-  const prereqsMet = arePrerequisitesMet(course.course_code);
   
   // Get missing prerequisites
   const getMissingPrerequisites = () => {
@@ -59,32 +64,6 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
     return missing;
   };
   
-  // Handle marking course as completed
-  const handleMarkCompleted = () => {
-    if (isCompleted) {
-      unmarkCourseCompleted(course.course_code);
-    } else {
-      markCourseCompleted(course.course_code);
-      
-      // If the course was planned, remove it from the plan
-      if (isPlanned) {
-        removeCourseFromPlan(course.course_code, getPlannedTerm());
-      }
-    }
-  };
-  
-  // Handle adding course to plan
-  const handleAddToPlan = () => {
-    if (selectedTerm) {
-      addCourseToPlan(course.course_code, selectedTerm);
-    }
-  };
-  
-  // Handle removing course from plan
-  const handleRemoveFromPlan = () => {
-    removeCourseFromPlan(course.course_code, getPlannedTerm());
-  };
-  
   // Format prerequisites for display
   const formatPrerequisites = (prerequisites) => {
     if (!prerequisites || prerequisites.length === 0) {
@@ -102,35 +81,20 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
   
   const missingPrereqs = getMissingPrerequisites();
   
-  // MANUAL FIX: Special handling for courses with multiple terms
-  const getTermsForCourse = (courseCode) => {
-    // Courses with multiple terms
-    const multiTermCourses = {
-      'PSY 202Z': ['Fall', 'Spring'],
-      'PSY 401': ['Fall', 'Winter', 'Spring'],
-      'PSY 410': ['Fall', 'Winter', 'Spring'],
-      'HDFS 201': ['Fall', 'Spring'],
-      'HDFS 262': ['Winter', 'Spring'],
-      'HDFS 310': ['Fall', 'Winter', 'Spring'],
-      'HDFS 401': ['Fall', 'Winter', 'Spring'],
-      'HDFS 405': ['Fall', 'Winter', 'Spring'],
-      'HDFS 406': ['Fall', 'Winter', 'Spring'],
-      'HDFS 447': ['Fall', 'Winter', 'Spring'],
-      'HDFS 469': ['Fall', 'Winter', 'Spring']
-    };
-    
-    // If it's a special course, use our manual list
-    if (multiTermCourses[courseCode]) {
-      return multiTermCourses[courseCode];
+  // Get terms for this course
+  const getTermsForCourse = () => {
+    // Ensure terms_offered is always an array
+    if (!course.terms_offered) {
+      return [];
     }
     
-    // Otherwise use the data from the course object
-    return Array.isArray(course.terms_offered) ? course.terms_offered : 
-           (course.terms_offered ? [course.terms_offered] : []);
+    return Array.isArray(course.terms_offered) 
+      ? course.terms_offered 
+      : [course.terms_offered];
   };
   
   // Get terms for this course
-  const termsList = getTermsForCourse(course.course_code);
+  const termsList = getTermsForCourse();
   
   return (
     <div className="bg-white rounded-lg shadow-md p-4 border-t-4 border-primary hover:shadow-lg transition-all duration-300">
@@ -162,7 +126,7 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
           </p>
         )}
         
-        {/* Display all terms with our manual fix */}
+        {/* Display all terms */}
         {termsList.length > 0 && (
           <p className="mt-1">
             <span className="font-medium">Available:</span> {termsList.join(', ')}
@@ -170,12 +134,14 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
         )}
         
         <div className="mt-3 flex justify-between items-center">
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-700 hover:bg-gray-200"
-          >
-            {showDetails ? 'Hide Details' : 'Show Details'}
-          </button>
+          {showDetailsButton && (
+            <button
+              onClick={() => setShowDetails(!showDetails)}
+              className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-700 hover:bg-gray-200"
+            >
+              {showDetails ? 'Hide Details' : 'Show Details'}
+            </button>
+          )}
           
           {!prereqsMet && !isCompleted && (
             <span className="text-xs text-red-600">
@@ -209,7 +175,7 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
           <div className="mt-4 flex flex-wrap gap-2 items-center">
             {!isCompleted && !isPlanned && selectedTerm && (
               <button
-                onClick={handleAddToPlan}
+                onClick={onAddToPlan}
                 disabled={!prereqsMet}
                 className={`text-xs px-2 py-1 rounded ${
                   !prereqsMet
@@ -223,23 +189,27 @@ const CourseCard = ({ course, showActions = true, selectedTerm = null }) => {
             
             {isPlanned && !isCompleted && (
               <button
-                onClick={handleRemoveFromPlan}
+                onClick={() => removeCourseFromPlan(course.course_code, getPlannedTerm())}
                 className="text-xs px-2 py-1 rounded bg-red-100 text-red-700 hover:bg-red-200"
               >
                 Remove from Plan
               </button>
             )}
             
-            <button
-              onClick={handleMarkCompleted}
-              className={`text-xs px-2 py-1 rounded ${
-                isCompleted
-                  ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
-                  : 'bg-green-100 text-green-700 hover:bg-green-200'
-              }`}
-            >
-              {isCompleted ? 'Mark Incomplete' : 'Mark Complete'}
-            </button>
+            {showMarkCompletedButton && (
+              <button
+                onClick={isCompleted ? 
+                  (onUnmarkCompleted || (() => unmarkCourseCompleted(course.course_code))) : 
+                  (onMarkCompleted || (() => markCourseCompleted(course.course_code)))}
+                className={`text-xs px-2 py-1 rounded ${
+                  isCompleted
+                    ? 'bg-red-100 text-red-700 hover:bg-red-200'
+                    : 'bg-green-100 text-green-700 hover:bg-green-200'
+                }`}
+              >
+                {isCompleted ? 'Mark as Incomplete' : 'Mark as Completed'}
+              </button>
+            )}
           </div>
         </div>
       )}

@@ -1,6 +1,7 @@
 // src/context/PlannerContext.js
 import React, { createContext, useState, useEffect, useContext, useCallback, useMemo } from 'react';
 import plannerData from '../data/psychology_planner_data.json';
+import extractedCourses from '../data/extracted_courses.json';
 
 const PlannerContext = createContext();
 
@@ -25,6 +26,10 @@ export const PlannerProvider = ({ children }) => {
   const [filterCategory, setFilterCategory] = useState('All Categories');
   const [filterTerm, setFilterTerm] = useState('All Terms');
   
+  // Add state for external courses
+  const [externalCourses, setExternalCourses] = useState([]);
+  const [showExternalCourses, setShowExternalCourses] = useState(true);
+  
   // Load saved data from localStorage if available
   useEffect(() => {
     try {
@@ -41,31 +46,64 @@ export const PlannerProvider = ({ children }) => {
         setPlannedCourses(JSON.parse(savedPlanned));
       }
       
-      // Validate that plannerData is properly loaded
-      if (!plannerData || !plannerData.courses || !plannerData.degree_requirements) {
-        throw new Error('Planner data is missing or invalid');
+      // Process the courses from the JSON structure
+      let processedCourses = [];
+      
+      // Check if plannerData is properly loaded
+      if (plannerData && plannerData.courses) {
+        // Map courses to the format expected by the application
+        processedCourses = plannerData.courses.map(course => ({
+          ...course,
+          // Ensure all required fields exist
+          course_code: course.course_code || '',
+          title: course.title || '',
+          credits: course.credits || 0,
+          description: course.description || '',
+          prerequisites: course.prerequisites || [],
+          // Ensure terms_offered is always an array, even if it's a single string in the data
+          terms_offered: Array.isArray(course.terms_offered) ? course.terms_offered : 
+                        (course.terms_offered ? [course.terms_offered] : []),
+          category: course.category || '',
+          requirement_categories: course.requirement_categories || []
+        }));
       }
       
-      // Process the courses from the updated JSON structure
-      const allCourses = plannerData.courses || [];
-      
-      // Map courses to the format expected by the application
-      const processedCourses = allCourses.map(course => ({
-        ...course,
-        // Ensure all required fields exist
-        course_code: course.course_code || '',
-        title: course.title || '',
-        credits: course.credits || 0,
-        description: course.description || '',
-        prerequisites: course.prerequisites || [],
-        // Ensure terms_offered is always an array, even if it's a single string in the data
-        terms_offered: Array.isArray(course.terms_offered) ? course.terms_offered : 
-                      (course.terms_offered ? [course.terms_offered] : []),
-        category: course.category || '',
-        requirement_categories: course.requirement_categories || []
-      }));
-      
       setCourses(processedCourses);
+      
+      // Process external courses
+      let processedExternalCourses = [];
+      
+      if (extractedCourses && Array.isArray(extractedCourses)) {
+        processedExternalCourses = extractedCourses.map(course => {
+          // Extract the course number to estimate credits
+          const courseNumber = parseInt(course.course_code.split(' ')[1], 10) || 0;
+          let credits = 4; // Default to 4 credits
+          
+          // Lower division courses (100-200 level) are often 3-4 credits
+          // Upper division courses (300-400 level) are often 4 credits
+          if (courseNumber < 300) {
+            credits = 3;
+          }
+          
+          return {
+            ...course,
+            credits,
+            // Add a flag to identify as external course
+            isExternalCourse: true,
+            // Ensure terms_offered is always an array
+            terms_offered: Array.isArray(course.terms_offered) ? course.terms_offered : 
+                          (course.terms_offered ? [course.terms_offered] : ['Fall', 'Winter', 'Spring']),
+            // Add empty prerequisites array
+            prerequisites: [],
+            // Add empty requirement categories
+            requirement_categories: [],
+            // Add empty description
+            description: course.description || ''
+          };
+        });
+      }
+      
+      setExternalCourses(processedExternalCourses);
       setLoading(false);
     } catch (err) {
       console.error('Error loading planner data:', err);
@@ -74,116 +112,167 @@ export const PlannerProvider = ({ children }) => {
     }
   }, []);
   
-  // Save to localStorage when data changes
+  // Save data to localStorage whenever it changes
   useEffect(() => {
-    if (!loading) {
-      try {
-        localStorage.setItem('completedCourses', JSON.stringify(completedCourses));
-      } catch (err) {
-        console.error('Error saving completed courses:', err);
-      }
+    if (completedCourses.length > 0) {
+      localStorage.setItem('completedCourses', JSON.stringify(completedCourses));
     }
-  }, [completedCourses, loading]);
-  
-  useEffect(() => {
-    if (!loading) {
-      try {
-        localStorage.setItem('plannedCourses', JSON.stringify(plannedCourses));
-      } catch (err) {
-        console.error('Error saving planned courses:', err);
-      }
+    
+    if (Object.keys(plannedCourses).length > 0) {
+      localStorage.setItem('plannedCourses', JSON.stringify(plannedCourses));
     }
-  }, [plannedCourses, loading]);
+  }, [completedCourses, plannedCourses]);
   
-  // Mark a course as completed - memoized to prevent unnecessary re-renders
+  // Mark a course as completed
   const markCourseCompleted = useCallback((courseCode) => {
-    if (!completedCourses.includes(courseCode)) {
-      setCompletedCourses(prev => [...prev, courseCode]);
-      
-      // Remove from planned courses if it exists there
-      setPlannedCourses(prev => {
-        const updated = { ...prev };
-        let changed = false;
-        
-        Object.keys(updated).forEach(term => {
-          if (updated[term].includes(courseCode)) {
-            updated[term] = updated[term].filter(code => code !== courseCode);
-            changed = true;
-          }
-        });
-        
-        return changed ? updated : prev;
-      });
-    }
-  }, [completedCourses]);
+    setCompletedCourses(prev => {
+      if (prev.includes(courseCode)) {
+        return prev;
+      }
+      return [...prev, courseCode];
+    });
+  }, []);
   
-  // Unmark a completed course - memoized
+  // Unmark a course as completed
   const unmarkCourseCompleted = useCallback((courseCode) => {
     setCompletedCourses(prev => prev.filter(code => code !== courseCode));
   }, []);
   
-  // Add course to a specific term plan - memoized
+  // Add a course to a term plan
   const addCourseToPlan = useCallback((courseCode, term) => {
     setPlannedCourses(prev => {
-      const termCourses = prev[term] || [];
+      const updatedPlannedCourses = { ...prev };
       
-      if (!termCourses.includes(courseCode)) {
-        // Remove from any other terms first
-        const updated = { ...prev };
-        let existsElsewhere = false;
-        
-        Object.keys(updated).forEach(existingTerm => {
-          if (existingTerm !== term && updated[existingTerm].includes(courseCode)) {
-            updated[existingTerm] = updated[existingTerm].filter(code => code !== courseCode);
-            existsElsewhere = true;
-          }
-        });
-        
-        return {
-          ...updated,
-          [term]: [...termCourses, courseCode]
-        };
+      // Initialize the term array if it doesn't exist
+      if (!updatedPlannedCourses[term]) {
+        updatedPlannedCourses[term] = [];
       }
       
-      return prev;
+      // Add the course if it's not already in the term
+      if (!updatedPlannedCourses[term].includes(courseCode)) {
+        updatedPlannedCourses[term] = [...updatedPlannedCourses[term], courseCode];
+      }
+      
+      return updatedPlannedCourses;
     });
   }, []);
   
-  // Remove course from a term plan - memoized
+  // Remove a course from a term plan
   const removeCourseFromPlan = useCallback((courseCode, term) => {
     setPlannedCourses(prev => {
-      const termCourses = prev[term] || [];
-      
-      if (termCourses.includes(courseCode)) {
-        return {
-          ...prev,
-          [term]: termCourses.filter(code => code !== courseCode)
-        };
+      if (!prev[term] || !prev[term].includes(courseCode)) {
+        return prev;
       }
       
-      return prev;
+      const updated = { ...prev };
+      updated[term] = updated[term].filter(code => code !== courseCode);
+      
+      return updated;
     });
   }, []);
   
-  // Check if prerequisites are met - memoized
+  // Toggle external courses visibility
+  const toggleExternalCourses = useCallback(() => {
+    // No-op, we always want to show external courses
+    // Or you could just remove this function entirely
+  }, []);
+  
+  // Get all courses (core + external if enabled)
+  const getAllCourses = useCallback(() => {
+    // Always return all courses, both core and external
+    const allCourses = [...courses, ...externalCourses].map(course => {
+      // Add common alternative names and tags for writing courses
+      if (course.course_code.startsWith('WR ')) {
+        return {
+          ...course,
+          tags: ['writing', 'composition', 'english'],
+          alternative_names: [
+            course.course_code.replace('WR ', 'writing '),
+            course.course_code.replace('WR ', 'wr')
+          ]
+        };
+      }
+      
+      // Add common alternative names for math courses
+      if (course.course_code.startsWith('MTH ')) {
+        return {
+          ...course,
+          tags: ['math', 'mathematics'],
+          alternative_names: [
+            course.course_code.replace('MTH ', 'math '),
+            course.course_code.replace('MTH ', 'mth')
+          ]
+        };
+      }
+      
+      // Add common alternative names for other courses
+      return {
+        ...course,
+        tags: [],
+        alternative_names: [
+          course.course_code.replace(' ', '')
+        ]
+      };
+    });
+    
+    return allCourses;
+  }, [courses, externalCourses]);
+  
+  // Check if prerequisites are met for a course
   const arePrerequisitesMet = useCallback((courseCode) => {
+    // First check if it's a core course
     const course = courses.find(c => c.course_code === courseCode);
     
-    if (!course || !course.prerequisites || course.prerequisites.length === 0) {
+    // If not found in core courses, check external courses
+    if (!course) {
+      const externalCourse = externalCourses.find(c => c.course_code === courseCode);
+      // External courses don't have prerequisites defined, so return true
+      if (externalCourse) {
+        return true;
+      }
+      // If course not found at all, return false
+      return false;
+    }
+    
+    // If no prerequisites, return true
+    if (!course.prerequisites || course.prerequisites.length === 0) {
       return true;
     }
     
-    // Handle prerequisites that might be in the format "COURSE1 or COURSE2"
+    // Check each prerequisite
     return course.prerequisites.every(prereq => {
       if (prereq.includes(' or ')) {
+        // Handle "or" conditions
         const options = prereq.split(' or ');
         return options.some(option => completedCourses.includes(option.trim()));
       }
+      
       return completedCourses.includes(prereq);
     });
-  }, [completedCourses, courses]);
+  }, [completedCourses, courses, externalCourses]);
   
-  // Get course recommendations - memoized
+  // Calculate total credits for a list of course codes
+  const calculateCredits = useCallback((courseCodes) => {
+    if (!courseCodes || courseCodes.length === 0) return 0;
+    
+    return courseCodes.reduce((total, code) => {
+      // First check in core courses
+      const course = courses.find(c => c.course_code === code);
+      if (course) {
+        return total + (parseInt(course.credits, 10) || 0);
+      }
+      
+      // If not found, check in external courses
+      const externalCourse = externalCourses.find(c => c.course_code === code);
+      if (externalCourse) {
+        return total + (parseInt(externalCourse.credits, 10) || 0);
+      }
+      
+      return total;
+    }, 0);
+  }, [courses, externalCourses]);
+  
+  // Get course recommendations based on completed courses
   const getCourseRecommendations = useCallback(() => {
     // Filter for courses that have prerequisites met but aren't completed
     const availableCourses = courses.filter(course => 
@@ -194,42 +283,36 @@ export const PlannerProvider = ({ children }) => {
     // Create a flat array of recommendations with category info
     const recommendations = [];
     
-    Object.entries(plannerData.degree_requirements.psychology_bs.categories).forEach(([key, category]) => {
-      const categoryName = category.name;
-      const coursesForCategory = availableCourses.filter(course => 
-        course.requirement_categories && course.requirement_categories.includes(categoryName)
-      );
-      
-      // Add each course with its category info
-      coursesForCategory.forEach(course => {
-        recommendations.push({
-          ...course,
-          category: categoryName,
-          reason: `Fulfills ${categoryName} requirement`
+    if (plannerData && plannerData.degree_requirements && plannerData.degree_requirements.psychology_bs) {
+      Object.entries(plannerData.degree_requirements.psychology_bs.categories || {}).forEach(([key, category]) => {
+        const categoryName = category.name;
+        const coursesForCategory = availableCourses.filter(course => 
+          course.requirement_categories && course.requirement_categories.includes(categoryName)
+        );
+        
+        // Add each course with its category info
+        coursesForCategory.forEach(course => {
+          recommendations.push({
+            ...course,
+            category: categoryName,
+            reason: `Fulfills ${categoryName} requirement`
+          });
         });
       });
-    });
+    }
     
     // Sort by credits (ascending) to prioritize easier courses first
     return recommendations.sort((a, b) => parseInt(a.credits) - parseInt(b.credits));
   }, [completedCourses, arePrerequisitesMet, courses]);
-
-  // Calculate total credits - memoized
-  const calculateCredits = useCallback((courseCodes) => {
-    if (!courseCodes || courseCodes.length === 0) return 0;
-    
-    return courseCodes.reduce((total, code) => {
-      const course = courses.find(c => c.course_code === code);
-      return total + (course ? course.credits : 0);
-    }, 0);
-  }, [courses]);
   
-  // Get term offerings data - memoized
+  // Get term offerings data
   const termOfferings = useMemo(() => {
     const offerings = {};
     
     // Group courses by term offered
-    courses.forEach(course => {
+    const allCourses = [...courses, ...externalCourses];
+    
+    allCourses.forEach(course => {
       if (course.terms_offered && course.terms_offered.length > 0) {
         course.terms_offered.forEach(term => {
           if (!offerings[term]) {
@@ -241,72 +324,66 @@ export const PlannerProvider = ({ children }) => {
     });
     
     return offerings;
-  }, [courses]);
+  }, [courses, externalCourses]);
   
-  // Memoize the context value to prevent unnecessary re-renders
-  const contextValue = useMemo(() => ({
-    courses,
-    degreeRequirements: plannerData.degree_requirements,
-    termOfferings,
-    completedCourses,
-    plannedCourses,
-    markCourseCompleted,
-    unmarkCourseCompleted,
-    addCourseToPlan,
-    removeCourseFromPlan,
-    arePrerequisitesMet,
-    getCourseRecommendations,
-    calculateCredits,
-    searchTerm,
-    setSearchTerm,
-    filterCategory,
-    setFilterCategory,
-    filterTerm,
-    setFilterTerm,
-    loading,
-    error
-  }), [
-    courses,
-    completedCourses,
-    plannedCourses,
-    markCourseCompleted,
-    unmarkCourseCompleted,
-    addCourseToPlan,
-    removeCourseFromPlan,
-    arePrerequisitesMet,
-    getCourseRecommendations,
-    calculateCredits,
-    searchTerm,
-    filterCategory,
-    filterTerm,
-    termOfferings,
-    loading,
-    error
-  ]);
-  
-  // Make sure categories have required_credits
-  if (contextValue.degreeRequirements) {
-    Object.keys(contextValue.degreeRequirements).forEach(degreeKey => {
-      const degree = contextValue.degreeRequirements[degreeKey];
-      if (degree.categories) {
-        Object.keys(degree.categories).forEach(categoryKey => {
-          const category = degree.categories[categoryKey];
-          if (!category.required_credits) {
-            category.required_credits = 0;
-          }
-        });
+  // Create the context value object with all the functions and data
+  const contextValue = useMemo(() => {
+    // Create a default degree requirements structure if missing
+    const defaultDegreeRequirements = {
+      psychology_bs: {
+        total_credits: 180,
+        categories: {}
       }
-    });
-  }
-  
-  // Update total credits to 180 everywhere
-  if (contextValue.degreeRequirements) {
-    Object.keys(contextValue.degreeRequirements).forEach(degreeKey => {
-      const degree = contextValue.degreeRequirements[degreeKey];
-      // Set total credits to 180
-      degree.total_credits = 180;
-    });
-  }
+    };
+    
+    return {
+      courses,
+      externalCourses,
+      completedCourses,
+      plannedCourses,
+      markCourseCompleted,
+      unmarkCourseCompleted,
+      addCourseToPlan,
+      removeCourseFromPlan,
+      arePrerequisitesMet,
+      getCourseRecommendations,
+      calculateCredits,
+      searchTerm,
+      setSearchTerm,
+      filterCategory,
+      setFilterCategory,
+      filterTerm,
+      setFilterTerm,
+      termOfferings,
+      loading,
+      error,
+      degreeRequirements: (plannerData && plannerData.degree_requirements) || defaultDegreeRequirements,
+      showExternalCourses,
+      toggleExternalCourses,
+      getAllCourses
+    };
+  }, [
+    courses,
+    externalCourses,
+    completedCourses,
+    plannedCourses,
+    markCourseCompleted,
+    unmarkCourseCompleted,
+    addCourseToPlan,
+    removeCourseFromPlan,
+    arePrerequisitesMet,
+    getCourseRecommendations,
+    calculateCredits,
+    searchTerm,
+    filterCategory,
+    filterTerm,
+    termOfferings,
+    loading,
+    error,
+    showExternalCourses,
+    toggleExternalCourses,
+    getAllCourses
+  ]);
   
   if (loading) {
     return (
